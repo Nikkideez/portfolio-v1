@@ -1,13 +1,13 @@
 import React from "react";
 
 import { SectionWrapper } from "../hoc";
-import { Toolbox } from "./canvas";
+import { Toolbox, Toolbox3 } from "./canvas";
 
 
 const Tech = () => {
   return (
     <div className='flex flex-row flex-wrap justify-center h-[1000px]'>
-      <Toolbox />
+      <Toolbox3 />
     </div>
   );
 };
