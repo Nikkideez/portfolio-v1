@@ -1,7 +1,7 @@
 import { motion, useAnimate, stagger } from 'framer-motion';
 import { useEffect } from 'react';
 import { styles } from '../styles';
-import { ComputersCanvas } from './canvas';
+import { ComputersCanvas, EarthCanvas } from './canvas';
 import hardHat from '../assets/DALL·E 2024-08-03 00.32.24 - A polygon mesh art of a hardhat with a wireframe appearance-Photoroom.png'
 
 const Hero = () => {
@@ -27,7 +27,10 @@ const Hero = () => {
               NIKHIL
             </h2>
             <div className="flex flex-row w-full">
-              <img src={hardHat} alt="hardhat" className="flex-shrink-0 max-w-[calc(100%-520px)] max-h-full object-contain block"/>
+              {/* <img src={hardHat} alt="hardhat" className="flex-shrink-0 max-w-[calc(100%-520px)] max-h-full object-contain block"/> */}
+              <div className="flex-shrink-0 w-[calc(100%-520px)] aspect-square block">
+                <EarthCanvas  />
+              </div>
               <div className="w-[520px]">
                 <h2 className="text-[288px] leading-[288px]">
                   DEO

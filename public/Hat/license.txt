@@ -1,0 +1,11 @@
+Model Information:
+* title:	Hard Hat Scan MEDPOLY
+* source:	https://sketchfab.com/3d-models/hard-hat-scan-medpoly-10edb2bd02444f3a8a3067b9da7ac2d5
+* author:	EvanLegrand (https://sketchfab.com/evan4129)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Hard Hat Scan MEDPOLY" (https://sketchfab.com/3d-models/hard-hat-scan-medpoly-10edb2bd02444f3a8a3067b9da7ac2d5) by EvanLegrand (https://sketchfab.com/evan4129) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

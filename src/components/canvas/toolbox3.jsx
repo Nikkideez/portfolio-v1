@@ -11,9 +11,11 @@ function Icon({ iconName, hovered, onPointerOver, onPointerOut, onClick, ...prop
             center
             prepend
             occlude="blending"
+            // onPointerOver={onPointerOver}
+            // onPointerOut={onPointerOut}
             castShadow
             receiveShadow
-            // material={<meshPhysicalMaterial side={DoubleSide} opacity={0.1} />}
+        // material={<meshPhysicalMaterial side={DoubleSide} opacity={0.1} />}
         >
             <i
                 className={`devicon-${iconName} colored`}
