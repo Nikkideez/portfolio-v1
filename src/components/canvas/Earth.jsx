@@ -6,6 +6,7 @@ import CanvasLoader from "../Loader";
 
 const Earth = ({ geometry }) => {
   return (
+    
     <Wireframe
       geometry={geometry}
       simplify={true}
@@ -19,22 +20,27 @@ const Earth = ({ geometry }) => {
 
 const EarthCanvas = () => {
   const gltfFiles = [
-    "./Hat/scene.gltf",
-    "./Mountain2/scene.gltf",
+    "./Hat2/Hardhat.glb",
+    // "./Keyboard2/Commodore.glb",
+    "./Keyboard/Keyboard.glb",
+    "./Mountain4/Mountain.glb",
     "./face/scene.gltf", // Add more paths here
+    "./Computer2/computer2.glb"
   ];
 
   const cameraConfigs = [
-    { position: [0, 0.1, 0], rotation: [1.1, 10.5, 10], scale: 1.6 }, // Config for the first model
-    { position: [0, 0, 0], rotation: [0, 0, 0], scale: 2 }, // Config for the second model
+    { position: [0, 0, 0], rotation: [-0.6, 2, 0], scale: 0.01 }, // Config for the first model
+    { position: [0, 0, 0], rotation: [1, 0, -0.2], scale: 0.012 }, // Config for the second model
+    { position: [0, -0.5, 0], rotation: [0, 0, 0], scale: 0.0055 }, // Config for the second model
     { position: [0, -1.4, 0], rotation: [0,0,0], scale: 0.25 }, // Config for the third model
+    { position: [0, -1.4, 0], rotation: [0,0,0], scale: 0.04 }, // Config for the third model
     // Add more configurations here
   ];
 
   const [currentGeometry, setCurrentGeometry] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const meshRef = useRef();
-  console.log(meshRef)
+  // console.log(meshRef)
 
   const gltfs = gltfFiles.map((file) => useGLTF(file));
 
@@ -47,9 +53,11 @@ const EarthCanvas = () => {
     return null;
   };
 
+  const geometries = gltfs.map((gltf) => getMeshGeometry(gltf));
+
   useEffect(() => {
     // Set the initial geometry and camera configuration
-    setCurrentGeometry(getMeshGeometry(gltfs[currentIndex]));
+    setCurrentGeometry(geometries[currentIndex]);
 
     // Start a loop that switches the geometry and camera every 5 seconds
     const intervalId = setInterval(() => {
