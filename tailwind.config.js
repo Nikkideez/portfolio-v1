@@ -18,6 +18,10 @@ module.exports = {
       screens: {
         xs: "450px",
       },
+      fontSize: {
+        sm: 'var(--fz-sm)',
+        md: 'var(--fz-md)',
+      },
       // backgroundImage: {
       //   "hero-pattern": "url('/src/assets/herobg.png')",
       // },

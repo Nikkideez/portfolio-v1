@@ -21,13 +21,12 @@ const Hero = () => {
       <div
         className={`absolute inset-0 top-[120px]  max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
       >
-        <div className="flex flex-col justify-center items-center mt-5 " ref={scope}>
-          <div className="w-[1050px]">
+        <div className="flex flex-col justify-center mt-5 " ref={scope}>
+          {/* <div className="w-[1050px]">
             <h2 className="text-[288px] leading-[288px]">
               NIKHIL
             </h2>
             <div className="flex flex-row w-full">
-              {/* <img src={hardHat} alt="hardhat" className="flex-shrink-0 max-w-[calc(100%-520px)] max-h-full object-contain block"/> */}
               <div className="flex-shrink-0 w-[calc(100%-520px)] aspect-square block">
                 <EarthCanvas  />
               </div>
@@ -40,7 +39,7 @@ const Hero = () => {
                 </p>
               </div>
             </div>
-          </div>
+          </div> */}
           {/* <div>
             <motion.h1
               initial={{ opacity: 0, y: -10 }}
@@ -62,6 +61,14 @@ const Hero = () => {
               I like to build stuff
             </motion.p>
           </div> */}
+          <div>
+            <h1 className='pt-[150px]'>Hello, my name is</h1>
+            <h2 className='clamped-text font-black text-purple-50 my-2'>Nikhil Deo</h2>
+            <h2 className='clamped-text-2 leading-[0.9] font-medium'>I'm a <span className='text-purple-300'>software engineer</span> who's passionate about <span className='text-purple-500'>building things</span>.</h2>
+          </div>
+          <div className='h-[40vw] aspect-square'>
+            <EarthCanvas />
+          </div>
         </div>
       </div>
       <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>

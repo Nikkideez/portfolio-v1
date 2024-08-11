@@ -127,6 +127,14 @@
   transform: translateZ(0);
 }
 
+.clamped-text {
+  font-size: clamp(32px, 8vw, 50px)
+}
+
+.clamped-text-2 {
+  font-size: clamp(12px, 6vw, 36px)
+}
+
 @keyframes mulShdSpin {
   0%,
   100% {
