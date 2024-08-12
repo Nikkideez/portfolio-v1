@@ -60,7 +60,7 @@ const Hero = () => {
             <h2 className='clamped-text font-black text-purple-50 my-2'>Nikhil Deo</h2>
             <h2 className='clamped-text-2 leading-[0.9] font-medium'>I'm a <span className='text-purple-300'>software engineer</span> who's passionate about <span className='text-purple-500'>{textChange}</span>.</h2>
           </div>
-          <div className='col-span-3 aspect-square'>
+          <div className='col-span-3 aspect-square overflow-visible'>
             <ModelCanvas setTextChange={setTextChange}/>
           </div>
         </div>

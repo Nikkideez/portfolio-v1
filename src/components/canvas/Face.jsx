@@ -1,46 +1,76 @@
-import React, { Suspense } from "react";
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Preload, useGLTF, AsciiRenderer } from "@react-three/drei";
-
+import React, { Suspense, useRef } from "react";
+import { Canvas, useFrame, useThree } from "@react-three/fiber";
+import { OrbitControls, Float, Preload, useGLTF, Wireframe } from "@react-three/drei";
+import * as THREE from "three";
 import CanvasLoader from "../Loader";
 
-const Earth = () => {
-  const earth = useGLTF("./planet/scene.gltf");
+const Model = ({ ...props }) => {
+  const gltf = useGLTF("./face/scene.gltf");
+  const modelRef = useRef();
+  const { pointer, viewport } = useThree();
+
+  // Function to get the mesh geometry
+  const getMeshGeometry = () => {
+    for (const key in gltf.nodes) {
+      if (gltf.nodes[key].isMesh) {
+        return gltf.nodes[key].geometry;
+      }
+    }
+    return null;
+  };
+
+  const geometry = getMeshGeometry();
+
+  // Function to update model's rotation based on mouse position
+  useFrame(() => {
+    if (modelRef.current) {
+      const x = (pointer.x * viewport.width) / 2;
+      const y = (pointer.y * viewport.height) / 2;
+      // console.log(modelRef.current.rotation)
+      modelRef.current.lookAt(new THREE.Vector3(x, y, 9));
+    }
+  });
 
   return (
-    <primitive object={earth.scene} scale={2.5} position-y={0} rotation-y={0} />
+    <group ref={modelRef} position={[0, -0.6, 3]} scale={0.1}>
+      <Float
+        // rotation={[0, -1.4, 0]}
+        // position={[0, -1.8, -2]}
+        
+        // matrixAutoUpdate={true}
+        autoInvalidate
+      >
+        <Wireframe
+          geometry={geometry}
+          simplify={true}
+          fill={"#373737"}
+          fillOpacity={0.9}
+          stroke={"white"}
+        />
+      </Float>
+    </group>
   );
 };
 
-const EarthCanvas = () => {
+const Face = () => {
   return (
     <Canvas
       shadows
-      // frameloop='demand'
+      frameloop="demand"
       dpr={[1, 2]}
-      // gl={{ preserveDrawingBuffer: true }}
+      gl={{ preserveDrawingBuffer: true }}
       camera={{
         fov: 45,
-        near: 0.1,
+        near: 1,
         far: 200,
-        position: [-4, 3, 6],
       }}
     >
-      {/* <color attach='background' args={["black"]} /> */}
       <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls
-          autoRotate
-          enableZoom={false}
-          maxPolarAngle={Math.PI / 2}
-          minPolarAngle={Math.PI / 2}
-        />
-        <Earth />
-
+        <Model />
         <Preload all />
       </Suspense>
-      <AsciiRenderer fgColor="white" bgColor="transparent"/>
     </Canvas>
   );
 };
 
-export default EarthCanvas;
+export default Face;

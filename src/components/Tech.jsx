@@ -1,7 +1,7 @@
 import React from "react";
 
 import { SectionWrapper } from "../hoc";
-import { Toolbox, Toolbox3 } from "./canvas";
+import { Toolbox3 } from "./canvas";
 
 
 const Tech = () => {
