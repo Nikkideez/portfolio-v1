@@ -1,12 +1,13 @@
 import { motion, useAnimate, stagger } from 'framer-motion';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { styles } from '../styles';
-import { ComputersCanvas, EarthCanvas } from './canvas';
+import { ModelCanvas } from './canvas';
 import hardHat from '../assets/DALL·E 2024-08-03 00.32.24 - A polygon mesh art of a hardhat with a wireframe appearance-Photoroom.png'
 
 const Hero = () => {
   const staggerElements = stagger(0.1, { startDelay: 0.2 });
   const [scope, animate] = useAnimate();
+  const [textChange, setTextChange] = useState("building things")
 
   useEffect(() => {
     animate(
@@ -21,7 +22,7 @@ const Hero = () => {
       <div
         className={`absolute inset-0 top-[120px]  max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
       >
-        <div className="flex flex-col justify-center mt-5 " ref={scope}>
+        <div className="grid lg:grid-cols-5 mt-5 pt-[150px] grid-cols-1" ref={scope}>
           {/* <div className="w-[1050px]">
             <h2 className="text-[288px] leading-[288px]">
               NIKHIL
@@ -50,24 +51,17 @@ const Hero = () => {
             </motion.h1>
             <motion.h2
               initial={{ opacity: 0, y: -10 }}
-              className={`${styles.heroHeadText} text-white`}
-            >
-              I like to build stuff.
-            </motion.h2>
-            <motion.p
-              initial={{ opacity: 0, y: -10 }}
-              className={`${styles.heroSubText} mt-2 text-white-100`}
-            >
+              className={`${styles.heroHeadText} text-white`} > I like to build stuff.  </motion.h2> <motion.p initial={{ opacity: 0, y: -10 }} className={`${styles.heroSubText} mt-2 text-white-100`} >
               I like to build stuff
             </motion.p>
           </div> */}
-          <div>
+          <div className='col-span-2 lg:mr-[-4vw]'>
             <h1 className='pt-[150px]'>Hello, my name is</h1>
             <h2 className='clamped-text font-black text-purple-50 my-2'>Nikhil Deo</h2>
-            <h2 className='clamped-text-2 leading-[0.9] font-medium'>I'm a <span className='text-purple-300'>software engineer</span> who's passionate about <span className='text-purple-500'>building things</span>.</h2>
+            <h2 className='clamped-text-2 leading-[0.9] font-medium'>I'm a <span className='text-purple-300'>software engineer</span> who's passionate about <span className='text-purple-500'>{textChange}</span>.</h2>
           </div>
-          <div className='h-[40vw] aspect-square'>
-            <EarthCanvas />
+          <div className='col-span-3 aspect-square'>
+            <ModelCanvas setTextChange={setTextChange}/>
           </div>
         </div>
       </div>
