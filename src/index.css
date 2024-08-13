@@ -15,8 +15,8 @@
 }
 
 .hash-span {
-  margin-top: -100px;
-  padding-bottom: 100px;
+  /* margin-top: -100px; */
+  padding-bottom: 10px;
   display: block;
 }
 
@@ -133,6 +133,10 @@
 
 .clamped-text-2 {
   font-size: clamp(12px, 6vw, 36px)
+}
+
+.clamped-text-3 {
+  font-size: clamp(20px, 6vw, 50px)
 }
 
 @keyframes mulShdSpin {

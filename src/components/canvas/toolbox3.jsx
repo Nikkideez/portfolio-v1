@@ -18,8 +18,8 @@ function Icon({ iconName, hovered, onPointerOver, onPointerOut, onClick, ...prop
         // material={<meshPhysicalMaterial side={DoubleSide} opacity={0.1} />}
         >
             <i
-                className={`devicon-${iconName} colored`}
-                style={{ fontSize: '58px' }}
+                className={`devicon-${iconName} colored clamped-text-3`}
+                // style={{ fontSize: '58px' }}
                 onMouseOver={onPointerOver}
                 onMouseOut={onPointerOut}
             />
