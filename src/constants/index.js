@@ -46,7 +46,7 @@ const jobs = [
   {
     // iconClass: 'icon-image2vector',
     logoSrc: saslogo,
-    company: 'SAS',
+    company: 'SAS Institute',
     title: 'Technical Support Engineer',
     period: 'Feb 2022 - Present',
     type: 'Fulltime',
