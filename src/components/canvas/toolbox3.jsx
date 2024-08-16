@@ -8,13 +8,14 @@ function Icon({ iconName, hovered, onPointerOver, onPointerOut, onClick, ...prop
     return (
         <Html
             {...props}
-            center
+            // center
             prepend
             occlude="blending"
             // onPointerOver={onPointerOver}
             // onPointerOut={onPointerOut}
-            castShadow
-            receiveShadow
+            castShadow={false}
+            receiveShadow={false}
+            distanceFactor={50}
         // material={<meshPhysicalMaterial side={DoubleSide} opacity={0.1} />}
         >
             <i
@@ -54,7 +55,7 @@ function Word({ children, iconName, ...props }) {
                 onPointerOver={over}
                 onPointerOut={out}
                 onClick={() => console.log('clicked')}
-                position={[0, -2, 0]}
+                position={[-1.5, -1, 0]}
             />
             <Text
                 ref={ref}
@@ -157,7 +158,7 @@ function GroupRotation() {
 
 export default function Toolbox() {
     return (
-        <Canvas dpr={[1, 2]} camera={{ position: [0, 0, 35], fov: 90 }}>
+        <Canvas dpr={[1, 2]} camera={{ position: [0, 0, 35], fov: 90 }} frameloop='demand' >
             <fog attach="fog" args={['#202025', 0, 80]} />
             <Suspense fallback={null}>
                 <GroupRotation />
@@ -166,3 +167,4 @@ export default function Toolbox() {
         </Canvas>
     );
 }
+

@@ -43,9 +43,10 @@ const Model = ({ ...props }) => {
         <Wireframe
           geometry={geometry}
           simplify={true}
-          fill={"#172f69"}
+          fill={"#3a486f"}
           fillOpacity={0.9}
           stroke={"white"}
+          fillMix={1}
         />
       </Float>
     </group>

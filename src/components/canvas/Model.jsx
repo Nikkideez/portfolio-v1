@@ -10,7 +10,7 @@ const Model = ({ geometry }) => {
     <Wireframe
       geometry={geometry}
       simplify={true}
-      fill={"#172f69"}
+      fill={"#3a486f"}
       // fillMix={1}
       fillOpacity={0.9}
       stroke={"white"}
