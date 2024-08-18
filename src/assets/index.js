@@ -31,6 +31,19 @@ import saslogo from "./company/sas-logo.svg";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import pImg from '../assets/projects/portfolio-png.png'
+import surveyR from '../assets/projects/Nokia TechLab_DSCF4441-Amos Wong_0.jpg'
+import robotSVG from '../assets/projects/Mediamodifier-Design.svg'
+import robotLTL from '../assets/projects/robot-ltl-planning.webp'
+import squidly from '../assets/projects/squidly.png'
+import squidlyLight from '../assets/projects/squidly-light.png'
+import squidlyEyeGaze from '../assets/projects/squidly-eyegaze.webp'
+import squidlyHomepage from '../assets/projects/squidly-homepage.png'
+import deepERVHome from '../assets/projects/deeperv-home.png'
+import deepERV from '../assets/projects/deeperv.webp'
+import autoCalHome from '../assets/projects/autocal.png'
+import proctorUTS from '../assets/projects/proctorUTS.png'
+import schoolAtHome from '../assets/projects/school@home.png'
 
 export {
   logo,
@@ -63,4 +76,17 @@ export {
   carrent,
   jobit,
   tripguide,
+  pImg,
+  surveyR,
+  squidly,
+  squidlyLight,
+  robotSVG,
+  robotLTL,
+  squidlyEyeGaze,
+  squidlyHomepage,
+  deepERVHome,
+  deepERV,
+  autoCalHome,
+  proctorUTS,
+  schoolAtHome
 };

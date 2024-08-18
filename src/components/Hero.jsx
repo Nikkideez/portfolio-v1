@@ -56,9 +56,9 @@ const Hero = () => {
             </motion.p>
           </div> */}
           <div className='col-span-2 lg:mr-[-4vw]'>
-            <h1 className='pt-[150px]'>Hello, my name is</h1>
-            <h2 className='clamped-text font-black text-purple-50 my-2'>Nikhil Deo</h2>
-            <h2 className='clamped-text-2 leading-[0.9] font-medium'>I'm a <span className='text-purple-300'>software engineer</span> who's passionate about <span className='text-purple-500'>{textChange}</span>.</h2>
+            <h1 className='pt-[150px] text-[#C3BABA]'>Hello, my name is</h1>
+            <h2 className='clamped-text font-black text-purple-50 my-2 text-[#E9E3E6]'>Nikhil Deo</h2>
+            <h2 className='clamped-text-2 leading-[0.9] font-medium text-[#C3BABA]'>I'm a <span className='text-teal-600'>software engineer</span> who's passionate about <span className='text-pink-600'>{textChange}</span>.</h2>
           </div>
           <div className='col-span-3 aspect-square overflow-visible'>
             <ModelCanvas setTextChange={setTextChange}/>

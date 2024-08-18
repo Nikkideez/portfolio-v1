@@ -1,87 +1,68 @@
 import React from 'react'
 import { SectionWrapper } from "../hoc";
-import pImg from '../assets/projects/portfolio-png.png'
-import surveyR from '../assets/projects/Nokia TechLab_DSCF4441-Amos Wong_0.jpg'
-import squidly from '../assets/projects/squidly.png'
+import { projects } from "../constants"
 
+// Function to reorder the projects array
+const reorderProjects = (projects, columns) => {
+  let reordered = [];
+  for (let i = 0; i < columns; i++) {
+    for (let j = i; j < projects.length; j += columns) {
+      reordered.push(projects[j]);
+    }
+  }
+  return reordered;
+}
+
+// projects component
+const ProjectContainer = ({ index, title, text, img, stackIcons, gitLink, readMoreLink }) => {
+  const h2Style = "text-[20px] font-bold mt-1"
+  const pStyle = "mt-2 text-gray-100 text-[14px] leading-tight"
+  const iDivStyle = "flex mt-4"
+  const iconStyle = "text-[2rem] mx-2 hover:text-pink-500 text-gray-500"
+  const buttonDivStyle = "flex mt-4 items-center"
+  const gitButtonStyle = "mr-4 ml-2 hover:text-emerald-500 text-[#C3BABA]"
+  const readMoreButtonStyle = "border-2 p-2 text-[0.75rem] rounded-sm hover:text-emerald-500 hover:border-emerald-500 text-[#C3BABA] border-[#C3BABA]"
+  return (
+    <div className="break-inside-avoid mb-7">
+      <img src={img} className='w-full rounded-sm' />
+      <h2 className={`${h2Style}`}>{title}</h2>
+      <p className='text-[0.75rem] text-gray-400'>2024</p>
+      <p className={`${pStyle}`}>{text}</p>
+      <div className={`${iDivStyle} justify-start`}>
+        {stackIcons.map((iconClass, index) => (
+          <i key={index} className={`${iconClass} ${iconStyle}`}></i>
+        ))}
+      </div>
+      <div className={`${buttonDivStyle} justify-start`}>
+        <a href={gitLink} className={`${gitButtonStyle}`}>
+          <i className="devicon-github-original text-[2rem]"></i>
+        </a>
+        <a href={readMoreLink} className={`${readMoreButtonStyle}`}>
+          Read More
+        </a>
+      </div>
+    </div>
+  );
+}
 
 const Works = () => {
-  // projects component
-  const ProjectContainer = ({ index, title, text, img }) => {
-    const h2Style = "text-[20px] font-bold"
-    const pStyle = "mt-5 text-gray-100 text-[14px]"
-    return ((index+1) % 2 ?
-      <>
-        <img src={img} className='col-span-3 rounded-sm' />
-        <div className='col-start-4 col-span-2'>
-          <h2 className={`${h2Style} text-right`}>{title}</h2>
-          <p className={`${pStyle} text-right`}>{text}</p>
-        </div>
-      </>
-      :
-      <>
-        <div className='col-span-2'>
-          <h2 className={`${h2Style}`}>{title}</h2>
-          <p className={`${pStyle}`}>{text}</p>
-        </div>
-        <img src={img} className='col-span-3 rounded-sm' />
-      </>
-    )
-  }
-
-  const projects = [
-    {
-      title: 'This Portfolio',
-      text: 'Needed to start somewhere with a digital portfolio. The most challenging part of this was figuring out the right design. There were projects like Brittany Chiangs that looked incredible with elegant and effective typogography, however I also wanted to learn about 3D animations. This resulted in a minimilistic React + ThreeJS project, and while there\'s still a lot I want to improve with the design, I learned a lot as well.',
-      img: pImg
-    },
-    {
-      title: 'Survey Robot',
-      text: 'Needed to start somewhere with a digital portfolio. The most challenging part of this was figuring out the right design. There were projects like Brittany Chiangs that looked incredible with elegant and effective typogography, however I also wanted to learn about 3D animations. This resulted in a minimilistic React + ThreeJS project, and while there\'s still a lot I want to improve with the design, I learned a lot as well.',
-      img: surveyR
-    },
-    {
-      title: 'Squidly',
-      text: 'Needed to start somewhere with a digital portfolio. The most challenging part of this was figuring out the right design. There were projects like Brittany Chiangs that looked incredible with elegant and effective typogography, however I also wanted to learn about 3D animations. This resulted in a minimilistic React + ThreeJS project, and while there\'s still a lot I want to improve with the design, I learned a lot as well.',
-      img: squidly
-    }
-  ]
+  const columns = 3;
+  const reorderedProjects = reorderProjects(projects, columns);
 
   return (
     <>
       <h1 className='clamped-text-2 text-center'>Projects</h1>
-      <div className='grid grid-cols-5 gap-x-6 gap-y-16 mt-9 items-center'>
-        {/* <img src={pImg} className='col-span-3 rounded-sm' />
-        <div className='col-start-4 col-span-2'>
-          <h2 className='text-right'>This Portfolio</h2>
-          <p className='text-right'>Needed to start somewhere with a digital portfolio. The most challenging part of this was figuring out the right design.
-            There were projects like Brittany Chiangs that looked incredible with elegant and effective typogography, however I also wanted to learn about 3D animations.
-            This resulted in a minimilistic React + ThreeJS project, and while there's still a lot I want to improve with the design, I learned a lot as well.
-          </p>
-        </div>
-        <div className='col-span-2'>
-          <h2>Survey Robot</h2>
-          <p>Needed to start somewhere with a digital portfolio. The most challenging part of this was figuring out the right design.
-            There were projects like Brittany Chiangs that looked incredible with elegant and effective typogography, however I also wanted to learn about 3D animations.
-            This resulted in a minimilistic React + ThreeJS project, and while there's still a lot I want to improve with the design, I learned a lot as well.
-          </p>
-        </div>
-        <img src={surveyR} className='col-span-3 col-start-3 rounded-sm' />
-        <img src={squidly} className='col-span-3 rounded-sm' />
-        <div className='col-span-2'>
-          <h2 className='text-right'>Survey Robot</h2>
-          <p className='text-right'>Needed to start somewhere with a digital portfolio. The most challenging part of this was figuring out the right design.
-            There were projects like Brittany Chiangs that looked incredible with elegant and effective typogography, however I also wanted to learn about 3D animations.
-            This resulted in a minimilistic React + ThreeJS project, and while there's still a lot I want to improve with the design, I learned a lot as well.
-          </p>
-        </div> */}
-        {projects.map((project, index) => (
+      <div className={`columns-${columns} gap-9 mt-9`}>
+        {reorderedProjects.map((project, index) => (
           <ProjectContainer
             key={index}
             index={index}
             title={project.title}
             text={project.text}
             img={project.img}
+            stackIcons={project.icons}
+            gitLink={project.gitLink}
+            readMoreLink={project.readMoreLink}
           />
         ))}
       </div>

@@ -25,7 +25,23 @@
 //   threejs,
 // } from "../assets";
 
-import { saslogo } from "../assets/"
+import {
+  saslogo, 
+  pImg,
+  surveyR,
+  squidly,
+  squidlyLight,
+  robotSVG,
+  robotLTL,
+  squidlyEyeGaze,
+  squidlyHomepage,
+  deepERVHome,
+  deepERV,
+  autoCalHome,
+  proctorUTS,
+  schoolAtHome
+} from "../assets/"
+
 
 export const navLinks = [
   {
@@ -74,6 +90,81 @@ const jobs = [
   }
   // Add more job objects here as needed
 ];
+
+const projects = [
+  {
+    title: 'This Portfolio',
+    text: 'Needed to start somewhere with a digital portfolio. The most challenging part of this was figuring out the right design. There were projects like Brittany Chiangs that looked incredible with elegant and effective typogography, however I also wanted to learn about 3D animations. This resulted in a minimilistic React + ThreeJS project, and while there\'s still a lot I want to improve with the design, I learned a lot as well.',
+    img: pImg,
+    icons: ['devicon-react-original', 'devicon-javascript-plain', 'devicon-html5-plain', 'devicon-css3-plain', 'devicon-tailwindcss-plain', 'devicon-threejs-original'],
+    gitLink: 'https://www.github.com',
+    readMoreLink: 'http://localhost:5173/#work'
+  },
+  {
+    title: 'Survey Robot',
+    text: 'Needed to start somewhere with a digital portfolio. The most challenging part of this was figuring out the right design. There were projects like Brittany Chiangs that looked incredible with elegant and effective typogography, however I also wanted to learn about 3D animations. This resulted in a minimilistic React + ThreeJS project, and while there\'s still a lot I want to improve with the design, I learned a lot as well. Adding more random text here to take up more space and text my theory about how columns determins where the next div will be placed.',
+    img: robotLTL,
+    icons: ['devicon-react-original', 'devicon-javascript-plain', 'devicon-html5-plain', 'devicon-css3-plain', 'devicon-tailwindcss-plain', 'devicon-threejs-original'],
+    gitLink: 'www.github.com',
+    readMoreLink: 'localhost:5173/works'
+  },
+  {
+    title: 'Squidly',
+    text: 'Needed to start somewhere with a digital portfolio. The most challenging part of this was figuring out the right design. There were projects like Brittany Chiangs that looked incredible with elegant and effective typogography, however I also wanted to learn about 3D animations. This resulted in a minimilistic React + ThreeJS project, and while there\'s still a lot I want to improve with the design, I learned a lot as well.',
+    img: squidlyHomepage,
+    icons: ['devicon-react-original', 'devicon-javascript-plain', 'devicon-html5-plain', 'devicon-css3-plain', 'devicon-tailwindcss-plain', 'devicon-threejs-original'],
+    gitLink: 'www.github.com',
+    readMoreLink: 'localhost:5173/works'
+  },
+  {
+    title: 'AutoCal',
+    text: 'Needed to start somewhere with a digital portfolio. The most challenging part of this was figuring out the right design. There were projects like Brittany Chiangs that looked incredible with elegant and effective typogography, however I also wanted to learn about 3D animations. This resulted in a minimilistic React + ThreeJS project, and while there\'s still a lot I want to improve with the design, I learned a lot as well.',
+    img: autoCalHome,
+    icons: ['devicon-react-original', 'devicon-javascript-plain', 'devicon-html5-plain', 'devicon-css3-plain', 'devicon-tailwindcss-plain', 'devicon-threejs-original'],
+    gitLink: 'www.github.com',
+    readMoreLink: 'localhost:5173/works'
+  },
+  {
+    title: 'DeepERV',
+    text: 'Needed to start somewhere with a digital portfolio. The most challenging part of this was figuring out the right design. There were projects like Brittany Chiangs that looked incredible with elegant and effective typogography, however I also wanted to learn about 3D animations. This resulted in a minimilistic React + ThreeJS project, and while there\'s still a lot I want to improve with the design, I learned a lot as well.',
+    img: deepERVHome,
+    icons: ['devicon-react-original', 'devicon-javascript-plain', 'devicon-html5-plain', 'devicon-css3-plain', 'devicon-tailwindcss-plain', 'devicon-threejs-original'],
+    gitLink: 'www.github.com',
+    readMoreLink: 'localhost:5173/works'
+  },
+  {
+    title: 'ProctorUTS',
+    text: 'Needed to start somewhere with a digital portfolio. The most challenging part of this was figuring out the right design. There were projects like Brittany Chiangs that looked incredible with elegant and effective typogography, however I also wanted to learn about 3D animations. This resulted in a minimilistic React + ThreeJS project, and while there\'s still a lot I want to improve with the design, I learned a lot as well.',
+    img: proctorUTS,
+    icons: ['devicon-react-original', 'devicon-javascript-plain', 'devicon-html5-plain', 'devicon-css3-plain', 'devicon-tailwindcss-plain', 'devicon-threejs-original'],
+    gitLink: 'www.github.com',
+    readMoreLink: 'localhost:5173/works'
+  },
+  {
+    title: 'School@Home',
+    text: 'Needed to start somewhere with a digital portfolio. The most challenging part of this was figuring out the right design. There were projects like Brittany Chiangs that looked incredible with elegant and effective typogography, however I also wanted to learn about 3D animations. This resulted in a minimilistic React + ThreeJS project, and while there\'s still a lot I want to improve with the design, I learned a lot as well.',
+    img: schoolAtHome,
+    icons: ['devicon-react-original', 'devicon-javascript-plain', 'devicon-html5-plain', 'devicon-css3-plain', 'devicon-tailwindcss-plain', 'devicon-threejs-original'],
+    gitLink: 'www.github.com',
+    readMoreLink: 'localhost:5173/works'
+  },
+  // {
+  //   title: 'School@Home',
+  //   text: 'Needed to start somewhere with a digital portfolio. The most challenging part of this was figuring out the right design. There were projects like Brittany Chiangs that looked incredible with elegant and effective typogography, however I also wanted to learn about 3D animations. This resulted in a minimilistic React + ThreeJS project, and while there\'s still a lot I want to improve with the design, I learned a lot as well.',
+  //   img: schoolAtHome,
+  //   icons: ['devicon-react-original', 'devicon-javascript-plain', 'devicon-html5-plain', 'devicon-css3-plain', 'devicon-tailwindcss-plain', 'devicon-threejs-original'],
+  //   gitLink: 'www.github.com',
+  //   readMoreLink: 'localhost:5173/works'
+  // },
+  // {
+  //   title: 'School@Home',
+  //   text: 'Needed to start somewhere with a digital portfolio. The most challenging part of this was figuring out the right design. There were projects like Brittany Chiangs that looked incredible with elegant and effective typogography, however I also wanted to learn about 3D animations. This resulted in a minimilistic React + ThreeJS project, and while there\'s still a lot I want to improve with the design, I learned a lot as well.',
+  //   img: schoolAtHome,
+  //   icons: ['devicon-react-original', 'devicon-javascript-plain', 'devicon-html5-plain', 'devicon-css3-plain', 'devicon-tailwindcss-plain', 'devicon-threejs-original'],
+  //   gitLink: 'www.github.com',
+  //   readMoreLink: 'localhost:5173/works'
+  // },
+]
 
 // const services = [
 //   {
@@ -297,4 +388,4 @@ const jobs = [
 //   },
 // ];
 
-export { jobs };
+export { jobs, projects };

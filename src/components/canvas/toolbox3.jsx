@@ -2,7 +2,6 @@ import * as THREE from 'three';
 import { useRef, useState, useMemo, useEffect, Suspense } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Billboard, Html, TrackballControls, Text } from '@react-three/drei';
-import { generate } from 'random-words';
 
 function Icon({ iconName, hovered, onPointerOver, onPointerOut, onClick, ...props }) {
     return (
