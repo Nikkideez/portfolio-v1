@@ -38,8 +38,8 @@ const Experience = () => {
 
   return (
     <div className='flex flex-col justify-center items-center my-[100px]'>
-      <div className='grid grid-cols-10 mt-[20px] items-start gap-y-5 gap-x-1'>
-        <h1 className='clamped-text-3 col-span-9 col-start-4'>Experience</h1>
+      <div className='grid grid-cols-10 mt-[5px] items-start gap-y-20 gap-x-1'>
+        <h1 className='clamped-text-2 col-span-9 col-start-4'>Experience</h1>
         {jobs.map((job, index) => (
           <JobExperience
             key={index}
