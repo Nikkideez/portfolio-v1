@@ -33,14 +33,14 @@ const ProjectContainer = ({ index, title, text, img, stackIcons, gitLink, readMo
           <i key={index} className={`${iconClass} ${iconStyle}`}></i>
         ))}
       </div>
-      <div className={`${buttonDivStyle} justify-start`}>
+      {/* <div className={`${buttonDivStyle} justify-start`}>
         <a href={gitLink} className={`${gitButtonStyle}`}>
           <i className="devicon-github-original text-[2rem]"></i>
         </a>
         <a href={readMoreLink} className={`${readMoreButtonStyle}`}>
           Read More
         </a>
-      </div>
+      </div> */}
     </div>
   );
 }
@@ -52,7 +52,7 @@ const Works = () => {
   return (
     <>
       <h1 className='clamped-text-2 text-center'>Projects</h1>
-      <div className={`columns-${columns} gap-9 mt-9`}>
+      <div className={`columns-3 gap-9 mt-9 `}>
         {reorderedProjects.map((project, index) => (
           <ProjectContainer
             key={index}
@@ -66,8 +66,9 @@ const Works = () => {
           />
         ))}
       </div>
+      {/* <div className='border-b-[1px] border-gray-700 mt-9'/> */}
     </>
   );
 };
 
-export default SectionWrapper(Works, "works");
+export default SectionWrapper(Works, "work");

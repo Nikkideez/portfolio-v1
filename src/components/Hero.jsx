@@ -20,7 +20,7 @@ const Hero = () => {
   return (
     <section className={`relative w-full h-screen mx-auto`}>
       <div
-        className={`absolute inset-0 top-[120px]  max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
+        className={`absolute inset-0 top-[120px]  max-w-7xl mx-auto ${styles.paddingX} flex flex-col items-start gap-5 justify-evenly`}
       >
         <div className="grid lg:grid-cols-5 mt-5 pt-[150px] grid-cols-1" ref={scope}>
           {/* <div className="w-[1050px]">
@@ -59,14 +59,14 @@ const Hero = () => {
             <h1 className='pt-[150px] text-[#C3BABA]'>Hello, my name is</h1>
             <h2 className='clamped-text font-black text-purple-50 my-2 text-[#E9E3E6]'>Nikhil Deo</h2>
             <h2 className='clamped-text-2 leading-[0.9] font-medium text-[#C3BABA]'>I'm a <span className='text-teal-600'>software engineer</span> who's passionate about <span className='text-pink-600'>{textChange}</span>.</h2>
+            <button className='mt-[50px] border-2 p-2 text-[1rem] rounded-sm hover:text-emerald-500 hover:border-emerald-500 text-[#C3BABA] border-[#C3BABA]'>Download Resume</button>
           </div>
           <div className='col-span-3 aspect-square overflow-visible'>
-            <ModelCanvas setTextChange={setTextChange}/>
+            <ModelCanvas setTextChange={setTextChange} />
           </div>
         </div>
-      </div>
-      <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
-        <a href='#about'>
+        <div className='xs:bottom-10 bottom-32 flex w-full justify-start items-center'>
+          {/* <a href='#about'>
           <div className='w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2'>
             <motion.div
               animate={{
@@ -80,7 +80,13 @@ const Hero = () => {
               className='w-3 h-3 rounded-full bg-secondary mb-1'
             />
           </div>
-        </a>
+        </a> */}
+        <div>
+          <p >[ n.deo@hotmail.co.uk ]</p>
+          <p>[ https://www.linkedin.com/in/ndeo/ ]</p>
+
+        </div>
+        </div>
       </div>
     </section>
   );

@@ -30,6 +30,7 @@ const JobExperience = ({ index, logoSrc, company, title, period, type, responsib
           ))}
         </ul>
       </div>
+      {/* <div className='col-span-10 border-b-2 border-gray-300'/> */}
     </>
   );
 };
@@ -37,7 +38,7 @@ const JobExperience = ({ index, logoSrc, company, title, period, type, responsib
 const Experience = () => {
 
   return (
-    <div className='flex flex-col justify-center items-center my-[100px]'>
+    <div className='flex flex-col justify-center items-center my-[100px] '>
       <div className='grid grid-cols-10 mt-[5px] items-start gap-y-20 gap-x-1'>
         <h1 className='clamped-text-2 col-span-9 col-start-4'>Experience</h1>
         {jobs.map((job, index) => (

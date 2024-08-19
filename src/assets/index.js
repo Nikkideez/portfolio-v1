@@ -1,5 +1,5 @@
 import logo from "./logo.svg";
-import ndlogo1 from "./ndlogo1.svg";
+import ndlogo1 from "./ndlogo3.svg";
 import backend from "./backend.png";
 import creator from "./creator.png";
 import mobile from "./mobile.png";
