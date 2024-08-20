@@ -136,7 +136,7 @@
 }
 
 .clamped-text-3 {
-  font-size: clamp(20px, 6vw, 50px)
+  font-size: clamp(20px, 6vw, 56px)
 }
 
 @keyframes mulShdSpin {

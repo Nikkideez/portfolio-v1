@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { styles } from '../styles';
 import { ModelCanvas } from './canvas';
 import hardHat from '../assets/DALL·E 2024-08-03 00.32.24 - A polygon mesh art of a hardhat with a wireframe appearance-Photoroom.png'
+import { InboxIcon, UserCircleIcon } from '@heroicons/react/24/outline';
 
 const Hero = () => {
   const staggerElements = stagger(0.1, { startDelay: 0.2 });
@@ -22,7 +23,7 @@ const Hero = () => {
       <div
         className={`absolute inset-0 top-[120px]  max-w-7xl mx-auto ${styles.paddingX} flex flex-col items-start gap-5 justify-evenly`}
       >
-        <div className="grid lg:grid-cols-5 mt-5 pt-[150px] grid-cols-1" ref={scope}>
+        <div className="grid lg:grid-cols-5 md:mt-5 md:pt-[150px] grid-cols-1" ref={scope}>
           {/* <div className="w-[1050px]">
             <h2 className="text-[288px] leading-[288px]">
               NIKHIL
@@ -56,7 +57,7 @@ const Hero = () => {
             </motion.p>
           </div> */}
           <div className='col-span-2 lg:mr-[-4vw]'>
-            <h1 className='pt-[150px] text-[#C3BABA]'>Hello, my name is</h1>
+            <h1 className='md:pt-[150px] text-[#C3BABA]'>Hello, my name is</h1>
             <h2 className='clamped-text font-black text-purple-50 my-2 text-[#E9E3E6]'>Nikhil Deo</h2>
             <h2 className='clamped-text-2 leading-[0.9] font-medium text-[#C3BABA]'>I'm a <span className='text-teal-600'>software engineer</span> who's passionate about <span className='text-pink-600'>{textChange}</span>.</h2>
             <button className='mt-[50px] border-2 p-2 text-[1rem] rounded-sm hover:text-emerald-500 hover:border-emerald-500 text-[#C3BABA] border-[#C3BABA]'>Download Resume</button>
@@ -81,11 +82,17 @@ const Hero = () => {
             />
           </div>
         </a> */}
-        <div>
-          <p className='text-pink-500'>[ <span className='text-[#E9E3E6]'>n.deo@hotmail.co.uk</span> ]</p>
-          <p className='text-pink-500'>[ <span className='text-[#E9E3E6]'>https://www.linkedin.com/in/ndeo/</span> ]</p>
+          <div>
+            <div className='flex flex-row'>
+              <InboxIcon className='h-6 w-6 text-[#E9E3E6] mr-2' />
+              <p className='text-[#E9E3E6]'>n.deo@hotmail.co.uk</p>
+            </div>
+            <div className='flex flex-row'>
+              <UserCircleIcon className='h-6 w-6 text-[#E9E3E6] mr-2' />
+              <p className='text-[#E9E3E6]'>www.linkedin.com/in/ndeo</p>
+            </div>
 
-        </div>
+          </div>
         </div>
       </div>
     </section>

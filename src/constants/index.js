@@ -98,11 +98,14 @@ const jobs = [
 const projects = [
   {
     title: 'This Portfolio',
-    text: 'Needed to start somewhere with a digital portfolio. The most challenging part of this was figuring out the right design. There were projects like Brittany Chiangs that looked incredible with elegant and effective typogography, however I also wanted to learn about 3D animations. This resulted in a minimilistic React + ThreeJS project, and while there\'s still a lot I want to improve with the design, I learned a lot as well.',
+    date: '2024',
+    role: 'Frontend Developer/Designer',
+    text: 'A vite-react build that uses TailwindCSS for styling. The design was inspired by Brittany Chiangs portfolio, and the 3D animations were inspired by the ThreeJS documentation. The project was built to help showcase my work.',
     img: pImg,
     icons: ['devicon-react-original', 'devicon-javascript-plain', 'devicon-html5-plain', 'devicon-css3-plain', 'devicon-tailwindcss-plain', 'devicon-threejs-original'],
     gitLink: 'https://www.github.com',
-    readMoreLink: 'http://localhost:5173/#work'
+    readMoreLink: '',
+    websiteLink: ''
   },
   {
     title: 'Survey Robot',
@@ -142,7 +145,8 @@ const projects = [
     img: proctorUTS,
     icons: ['devicon-react-original', 'devicon-javascript-plain', 'devicon-html5-plain', 'devicon-css3-plain', 'devicon-tailwindcss-plain', 'devicon-threejs-original'],
     gitLink: 'www.github.com',
-    readMoreLink: 'localhost:5173/works'
+    readMoreLink: 'localhost:5173/works',
+    websiteLink: 'https://proctor-uts.vercel.app/'
   },
   {
     title: 'School@Home',

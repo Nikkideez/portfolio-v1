@@ -81,7 +81,7 @@ const Model = forwardRef(({ ...props }, ref) => {
       const x = (pointer.x * viewport.width) / 2;
       const y = (pointer.y * viewport.height) / 2;
       // console.log(modelRef.current.rotation)
-      ref.current.lookAt(new THREE.Vector3(3, 9, x));
+      ref.current.lookAt(new THREE.Vector3(3, 9, -x));
     }
   });
 

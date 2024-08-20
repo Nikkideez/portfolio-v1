@@ -7,6 +7,7 @@ import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 import { Paperplane } from "./canvas"
+import { InboxIcon, UserCircleIcon } from '@heroicons/react/24/outline';
 
 const ServiceCard = ({ index, title, icon }) => (
   <Tilt className='xs:w-[250px] w-full'>
@@ -60,9 +61,23 @@ const Contact = () => {
               // loop
               className={styles.sectionHeadText}
             />
+            <motion.div
+
+              className='flex flex-row'
+              variants={fadeIn("", "", 4, 1)}
+            >
+              <InboxIcon className='h-8 w-8 text-[#E9E3E6] mr-2' />
+              <p className='text-pink-500 text-[1.2rem]'>n.deo@hotmail.co.uk</p>
+            </motion.div>
+            <motion.div
+              className='flex flex-row'
+              variants={fadeIn("", "", 4.2, 1)}
+            >
+              <UserCircleIcon className='h-8 w-8 text-[#E9E3E6] mr-2' />
+              <p className='text-pink-300 text-[1.2rem]'>www.linkedin.com/in/ndeo</p>
+            </motion.div>
           </motion.div>
-          {/* {isTypingComplete && ( */}
-          <motion.p
+          {/* <motion.p
             variants={fadeIn("", "", 4, 1)}
             className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
           >
@@ -73,7 +88,7 @@ const Contact = () => {
             className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
           >
             https://www.linkedin.com/in/ndeo/
-          </motion.p>
+          </motion.p> */}
           {/* )} */}
           {/* <div className='mt-20 flex flex-wrap gap-10'>
             {services.map((service, index) => (
