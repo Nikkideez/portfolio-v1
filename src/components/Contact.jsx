@@ -50,9 +50,9 @@ const Contact = () => {
           <motion.div variants={textVariant()}>
             {/* <h2 className={styles.sectionHeadText}>Overview.</h2> */}
             <ReactTyped
-              strings={["Still keen ?", "Contact me."]}
-              typeSpeed={50}
-              backSpeed={50}
+              strings={["Still keen ? ^1000 Contact me."]}
+              typeSpeed={75}
+              backSpeed={0}
               backDelay={1000}
               startWhenVisible={true}
               // onBegin={() => setIsTypingComplete(true)}
@@ -63,13 +63,13 @@ const Contact = () => {
           </motion.div>
           {/* {isTypingComplete && ( */}
           <motion.p
-            variants={fadeIn("", "", 2, 1)}
+            variants={fadeIn("", "", 4, 1)}
             className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
           >
             nixfrfr@sent.com
           </motion.p>
           <motion.p
-            variants={fadeIn("", "", 2.2, 1)}
+            variants={fadeIn("", "", 4.2, 1)}
             className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
           >
             https://www.linkedin.com/in/ndeo/

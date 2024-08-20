@@ -3,16 +3,16 @@ import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
 import { ReactTyped } from "react-typed";
 import { styles } from "../styles";
-// import { services } from "../constants";
+import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 import { Face } from "./canvas"
 
 const ServiceCard = ({ index, title, icon }) => (
-  <Tilt className='xs:w-[250px] w-full'>
+  <Tilt className='xs:w-[140px] w-full'>
     <motion.div
       variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-      className='w-full bg-white p-[1px]'
+      className='w-full bg-gray-600 hover:bg-pink-500 p-[1px]'
     >
       <div
         options={{
@@ -20,7 +20,7 @@ const ServiceCard = ({ index, title, icon }) => (
           scale: 1,
           speed: 450,
         }}
-        className='bg-primary  py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'
+        className='bg-primary  py-5 px-12 min-h-[180px] flex justify-evenly items-center flex-col'
       >
         <img
           src={icon}
@@ -28,7 +28,7 @@ const ServiceCard = ({ index, title, icon }) => (
           className='w-16 h-16 object-contain'
         />
 
-        <h3 className='text-white text-[20px] font-bold text-center'>
+        <h3 className='text-blue-50 text-[1rem] font-thin text-center'>
           {title}
         </h3>
       </div>
@@ -72,11 +72,11 @@ const About = () => {
             Hello, I’m Nikhil! I’m a software engineer who’s endlessly fascinated by all the cool things that can be built with code.
           </motion.p>
           {/* )} */}
-          {/* <div className='mt-20 flex flex-wrap gap-10'>
+          <div className='mt-20 flex flex-wrap gap-3'>
             {services.map((service, index) => (
               <ServiceCard key={service.title} index={index} {...service} />
             ))}
-          </div> */}
+          </div>
         </div>
 
       </div>

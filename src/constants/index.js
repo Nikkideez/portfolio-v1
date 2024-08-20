@@ -39,7 +39,11 @@ import {
   deepERV,
   autoCalHome,
   proctorUTS,
-  schoolAtHome
+  schoolAtHome,
+  mobile,
+  backend,
+  creator,
+  web,
 } from "../assets/"
 
 
@@ -166,24 +170,24 @@ const projects = [
   // },
 ]
 
-// const services = [
-//   {
-//     title: "Web Developer",
-//     icon: web,
-//   },
-//   {
-//     title: "React Native Developer",
-//     icon: mobile,
-//   },
-//   {
-//     title: "Backend Developer",
-//     icon: backend,
-//   },
-//   {
-//     title: "Content Creator",
-//     icon: creator,
-//   },
-// ];
+const services = [
+  {
+    title: "Web Developer",
+    icon: web,
+  },
+  {
+    title: "Data Engineer",
+    icon: mobile,
+  },
+  {
+    title: "Backend Developer",
+    icon: backend,
+  },
+  {
+    title: "Problem Solver",
+    icon: creator,
+  },
+];
 
 // const technologies = [
 //   {
@@ -388,4 +392,4 @@ const projects = [
 //   },
 // ];
 
-export { jobs, projects };
+export { jobs, projects, services };

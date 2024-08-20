@@ -82,8 +82,8 @@ const Hero = () => {
           </div>
         </a> */}
         <div>
-          <p >[ n.deo@hotmail.co.uk ]</p>
-          <p>[ https://www.linkedin.com/in/ndeo/ ]</p>
+          <p className='text-pink-500'>[ <span className='text-[#E9E3E6]'>n.deo@hotmail.co.uk</span> ]</p>
+          <p className='text-pink-500'>[ <span className='text-[#E9E3E6]'>https://www.linkedin.com/in/ndeo/</span> ]</p>
 
         </div>
         </div>

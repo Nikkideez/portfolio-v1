@@ -16,7 +16,7 @@ const reorderProjects = (projects, columns) => {
 // projects component
 const ProjectContainer = ({ index, title, text, img, stackIcons, gitLink, readMoreLink }) => {
   const h2Style = "text-[20px] font-bold mt-1"
-  const pStyle = "mt-2 text-gray-100 text-[14px] leading-tight"
+  const pStyle = "mt-2 text-gray-300 text-[14px] leading-tight"
   const iDivStyle = "flex mt-4"
   const iconStyle = "text-[2rem] mx-2 hover:text-pink-500 text-gray-500"
   const buttonDivStyle = "flex mt-4 items-center"
@@ -27,6 +27,7 @@ const ProjectContainer = ({ index, title, text, img, stackIcons, gitLink, readMo
       <img src={img} className='w-full rounded-sm' />
       <h2 className={`${h2Style}`}>{title}</h2>
       <p className='text-[0.75rem] text-gray-400'>2024</p>
+      <h3 className='text-yellow-300'>Fullstack lead</h3>
       <p className={`${pStyle}`}>{text}</p>
       <div className={`${iDivStyle} justify-start`}>
         {stackIcons.map((iconClass, index) => (
