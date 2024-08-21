@@ -3,6 +3,7 @@ import { SectionWrapper } from "../hoc";
 import { projects } from "../constants"
 import { motion } from 'framer-motion';
 import { ArrowUpRightIcon } from '@heroicons/react/24/solid';
+import { iconList } from '../constants';
 
 // Function to reorder the projects array
 const reorderProjects = (projects, columns) => {
@@ -32,18 +33,15 @@ const ProjectContainer = ({ index, title, text, img, stackIcons, gitLink, readMo
           className={`absolute bottom-2 right-2 opacity-0 group-hover:opacity-100 hover:cursor-pointer transition-opacity duration-300 flex flex-col items-end`}
         >
           {websiteLink &&
-            <a
-              className='my-2'
-              href={websiteLink}
-            >
+            <a className='my-2' href={websiteLink}>
               <ArrowUpRightIcon className="text-gray-700 size-8 hover:size-10 hover:text-teal-600 transition-all duration-300" />
             </a>
           }
-          <a
-            href={gitLink}
-          >
-            <i className="devicon-github-original text-gray-700 text-[2rem] hover:text-[2.5rem] hover:text-pink-500 transition-all duration-300"></i>
-          </a>
+          {gitLink &&
+            <a href={gitLink}>
+              <i className="devicon-github-original text-gray-700 text-[2rem] hover:text-[2.5rem] hover:text-pink-500 transition-all duration-300"></i>
+            </a>
+          }
         </div>
       </div>
       <h2 className={`${h2Style}`}>{title}</h2>
@@ -51,8 +49,10 @@ const ProjectContainer = ({ index, title, text, img, stackIcons, gitLink, readMo
       <h3 className='text-yellow-300'>Fullstack lead</h3>
       <p className={`${pStyle}`}>{text}</p>
       <div className={`${iDivStyle} justify-start`}>
-        {stackIcons.map((iconClass, index) => (
-          <i key={index} className={`${iconClass} ${iconStyle}`}></i>
+        {stackIcons.map((iconName, index) => (
+          <a key={index} href={iconList[iconName][1]}>
+            <i className={`devicon-${iconList[iconName][0]} ${iconStyle}`}></i>
+          </a>
         ))}
       </div>
       {/* <div className={`${buttonDivStyle} justify-start`}>
@@ -73,7 +73,7 @@ const Works = () => {
 
   return (
     <>
-      <h1 className='clamped-text-3 font-medium text-center'>Projects</h1>
+      <h1 className='clamped-text-3 font-black text-center'>Projects</h1>
       <div className={`columns-1 md:columns-2 lg:columns-3 gap-9 mt-9`}>
         {reorderedProjects.map((project, index) => (
           <ProjectContainer

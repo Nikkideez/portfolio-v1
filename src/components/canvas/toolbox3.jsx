@@ -2,6 +2,7 @@ import * as THREE from 'three';
 import { useRef, useState, useMemo, useEffect, Suspense } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Billboard, Html, TrackballControls, Text } from '@react-three/drei';
+import { iconList } from '../../constants'
 
 function Icon({ iconName, hovered, onPointerOver, onPointerOut, onClick, ...props }) {
     return (
@@ -71,63 +72,24 @@ function Word({ children, iconName, ...props }) {
 }
 
 function Cloud({ count = 4, radius = 20 }) {
-    const iconList = [
-        'amazonwebservices-plain-wordmark',
-        'anaconda-original',
-        'archlinux-plain',
-        'azure-original',
-        'bash-plain',
-        'blender-original',
-        'c-plain',
-        'centos-plain',
-        'cmake-plain',
-        'css3-plain',
-        'django-plain',
-        'djangorest-plain-wordmark',
-        'docker-plain',
-        'fastapi-original',
-        'figma-plain',
-        'firebase-original',
-        'git-plain',
-        'github-original',
-        'go-original-wordmark',
-        'hadoop-plain',
-        'html5-plain',
-        'java-plain',
-        'javascript-plain',
-        'jira-plain',
-        'jupyter-plain',
-        'keras-plain',
-        'kubernetes-plain',
-        'linux-plain',
-        'nextjs-plain',
-        'nginx-original',
-        'nodejs-plain',
-        'postgresql-plain',
-        'python-plain',
-        'pytorch-original',
-        'rabbitmq-original',
-        'redhat-plain',
-        'scikitlearn-plain',
-        'solidity-plain',
-        'tailwindcss-original',
-        'tensorflow-original',
-        'threejs-original',
-        'vuejs-plain',
-    ];
+    const keys = Object.keys(iconList);
 
     const words = useMemo(() => {
         const temp = [];
+        const count = Math.ceil(Math.sqrt(keys.length));
         const spherical = new THREE.Spherical();
         const phiSpan = Math.PI / (count + 1);
         const thetaSpan = (Math.PI * 2) / count;
+        let index = 0;
         for (let i = 1; i < count + 1; i++) {
             for (let j = 0; j < count; j++) {
                 const phi = phiSpan * i;
                 const theta = thetaSpan * j;
                 spherical.set(radius, phi, theta);
+                if (index === keys.length) index = 0;
                 const position = new THREE.Vector3().setFromSpherical(spherical);
-                temp.push([position, iconList[(i * count + j) % iconList.length]]);
+                temp.push([position, iconList[keys[index]][0]]);
+                index++;
             }
         }
         return temp;

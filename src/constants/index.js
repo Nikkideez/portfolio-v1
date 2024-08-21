@@ -26,7 +26,7 @@
 // } from "../assets";
 
 import {
-  saslogo, 
+  saslogo,
   pImg,
   surveyR,
   squidly,
@@ -61,6 +61,59 @@ export const navLinks = [
     title: "Contact",
   },
 ];
+
+const iconList = {
+  'aws': ['amazonwebservices-plain-wordmark', 'https://aws.amazon.com/', 'Amazon Web Services'],
+  'anaconda': ['anaconda-original', 'https://www.anaconda.com/', 'Anaconda'],
+  'archlinux': ['archlinux-plain', 'https://archlinux.org/', 'Arch Linux'],
+  'azure': ['azure-original', 'https://azure.microsoft.com/', 'Microsoft Azure'],
+  'bash': ['bash-plain', 'https://www.gnu.org/software/bash/', 'Bash'],
+  'blender': ['blender-original', 'https://www.blender.org/', 'Blender'],
+  'c': ['c-plain', 'https://en.wikipedia.org/wiki/C_(programming_language)', 'C'],
+  'centos': ['centos-plain', 'https://www.centos.org/', 'CentOS'],
+  'cmake': ['cmake-plain', 'https://cmake.org/', 'CMake'],
+  'css3': ['css3-plain', 'https://developer.mozilla.org/en-US/docs/Web/CSS', 'CSS3'],
+  'django': ['django-plain', 'https://www.djangoproject.com/', 'Django'],
+  'djangorest': ['djangorest-plain-wordmark', 'https://www.django-rest-framework.org/', 'Django REST Framework'],
+  'docker': ['docker-plain', 'https://www.docker.com/', 'Docker'],
+  'fastapi': ['fastapi-original', 'https://fastapi.tiangolo.com/', 'FastAPI'],
+  'figma': ['figma-plain', 'https://www.figma.com/', 'Figma'],
+  'firebase': ['firebase-original', 'https://firebase.google.com/', 'Firebase'],
+  'git': ['git-plain', 'https://git-scm.com/', 'Git'],
+  'github': ['github-original', 'https://github.com', 'GitHub'],
+  'go': ['go-original-wordmark', 'https://golang.org/', 'Go'],
+  'hadoop': ['hadoop-plain', 'https://hadoop.apache.org/', 'Hadoop'],
+  'html5': ['html5-plain', 'https://developer.mozilla.org/en-US/docs/Web/HTML', 'HTML5'],
+  'java': ['java-plain', 'https://www.java.com/', 'Java'],
+  'javascript': ['javascript-plain', 'https://developer.mozilla.org/en-US/docs/Web/JavaScript', 'JavaScript'],
+  'jira': ['jira-plain', 'https://www.atlassian.com/software/jira', 'Jira'],
+  'jupyter': ['jupyter-plain', 'https://jupyter.org/', 'Jupyter'],
+  'kera': ['keras-plain', 'https://keras.io/', 'Keras'],
+  'kubernetes': ['kubernetes-plain', 'https://kubernetes.io/', 'Kubernetes'],
+  'linux': ['linux-plain', 'https://www.linux.org/', 'Linux'],
+  'next': ['nextjs-plain', 'https://nextjs.org/', 'Next.js'],
+  'nginx': ['nginx-original', 'https://www.nginx.com/', 'Nginx'],
+  'nodejs': ['nodejs-plain', 'https://nodejs.org/', 'Node.js'],
+  'postgresql': ['postgresql-plain', 'https://www.postgresql.org/', 'PostgreSQL'],
+  'python': ['python-plain', 'https://www.python.org/', 'Python'],
+  'pytorch': ['pytorch-original', 'https://pytorch.org/', 'PyTorch'],
+  'rabbitmq': ['rabbitmq-original', 'https://www.rabbitmq.com/', 'RabbitMQ'],
+  'react': ['react-original', 'https://reactjs.org/', 'React'],
+  'redhat': ['redhat-plain', 'https://www.redhat.com/en', 'Red Hat'],
+  'sas': ['', 'https://www.sas.com/', 'SAS'],
+  'scikitLearn': ['scikitlearn-plain', 'https://scikit-learn.org/stable/', 'scikit-learn'],
+  'solidity': ['solidity-plain', 'https://soliditylang.org/', 'Solidity'],
+  'tailwindcss': ['tailwindcss-original', 'https://tailwindcss.com/', 'Tailwind CSS'],
+  'tensorflow': ['tensorflow-original', 'https://www.tensorflow.org/', 'TensorFlow'],
+  'threejs': ['threejs-original', 'https://threejs.org/', 'Three.js'],
+  'vuejs': ['vuejs-plain', 'https://vuejs.org/', 'Vue.js'],
+};
+
+const toolbox = {
+  "core": ['bash', 'css3', 'docker', 'git', 'html5', 'javascript', 'kubernetes', 'linux', 'python', 'postgresql', 'react', 'sas'],
+  "exclude": []
+}
+
 
 const jobs = [
   {
@@ -102,7 +155,7 @@ const projects = [
     role: 'Frontend Developer/Designer',
     text: 'A vite-react build that uses TailwindCSS for styling. The design was inspired by Brittany Chiangs portfolio, and the 3D animations were inspired by the ThreeJS documentation. The project was built to help showcase my work.',
     img: pImg,
-    icons: ['devicon-react-original', 'devicon-javascript-plain', 'devicon-html5-plain', 'devicon-css3-plain', 'devicon-tailwindcss-plain', 'devicon-threejs-original'],
+    icons: ['react', 'javascript', 'html5', 'css3', 'tailwindcss', 'threejs'],
     gitLink: 'https://www.github.com',
     readMoreLink: '',
     websiteLink: ''
@@ -111,7 +164,7 @@ const projects = [
     title: 'Survey Robot',
     text: 'Needed to start somewhere with a digital portfolio. The most challenging part of this was figuring out the right design. There were projects like Brittany Chiangs that looked incredible with elegant and effective typogography, however I also wanted to learn about 3D animations. This resulted in a minimilistic React + ThreeJS project, and while there\'s still a lot I want to improve with the design, I learned a lot as well. Adding more random text here to take up more space and text my theory about how columns determins where the next div will be placed.',
     img: robotLTL,
-    icons: ['devicon-react-original', 'devicon-javascript-plain', 'devicon-html5-plain', 'devicon-css3-plain', 'devicon-tailwindcss-plain', 'devicon-threejs-original'],
+    icons: ['react', 'javascript', 'html5', 'css3', 'tailwindcss', 'threejs'],
     gitLink: 'www.github.com',
     readMoreLink: 'localhost:5173/works'
   },
@@ -119,15 +172,17 @@ const projects = [
     title: 'Squidly',
     text: 'Needed to start somewhere with a digital portfolio. The most challenging part of this was figuring out the right design. There were projects like Brittany Chiangs that looked incredible with elegant and effective typogography, however I also wanted to learn about 3D animations. This resulted in a minimilistic React + ThreeJS project, and while there\'s still a lot I want to improve with the design, I learned a lot as well.',
     img: squidlyHomepage,
-    icons: ['devicon-react-original', 'devicon-javascript-plain', 'devicon-html5-plain', 'devicon-css3-plain', 'devicon-tailwindcss-plain', 'devicon-threejs-original'],
-    gitLink: 'www.github.com',
-    readMoreLink: 'localhost:5173/works'
+    icons: ['react', 'javascript', 'html5', 'css3', 'tailwindcss', 'threejs'],
+    gitLink: '',
+    readMoreLink: 'localhost:5173/works',
+    websiteLink: 'https://www.squidly.com.au/'
+
   },
   {
     title: 'AutoCal',
     text: 'Needed to start somewhere with a digital portfolio. The most challenging part of this was figuring out the right design. There were projects like Brittany Chiangs that looked incredible with elegant and effective typogography, however I also wanted to learn about 3D animations. This resulted in a minimilistic React + ThreeJS project, and while there\'s still a lot I want to improve with the design, I learned a lot as well.',
     img: autoCalHome,
-    icons: ['devicon-react-original', 'devicon-javascript-plain', 'devicon-html5-plain', 'devicon-css3-plain', 'devicon-tailwindcss-plain', 'devicon-threejs-original'],
+    icons: ['react', 'javascript', 'html5', 'css3', 'tailwindcss', 'threejs'],
     gitLink: 'www.github.com',
     readMoreLink: 'localhost:5173/works'
   },
@@ -135,7 +190,7 @@ const projects = [
     title: 'DeepERV',
     text: 'Needed to start somewhere with a digital portfolio. The most challenging part of this was figuring out the right design. There were projects like Brittany Chiangs that looked incredible with elegant and effective typogography, however I also wanted to learn about 3D animations. This resulted in a minimilistic React + ThreeJS project, and while there\'s still a lot I want to improve with the design, I learned a lot as well.',
     img: deepERVHome,
-    icons: ['devicon-react-original', 'devicon-javascript-plain', 'devicon-html5-plain', 'devicon-css3-plain', 'devicon-tailwindcss-plain', 'devicon-threejs-original'],
+    icons: ['react', 'javascript', 'html5', 'css3', 'tailwindcss', 'threejs'],
     gitLink: 'www.github.com',
     readMoreLink: 'localhost:5173/works'
   },
@@ -143,7 +198,7 @@ const projects = [
     title: 'ProctorUTS',
     text: 'Needed to start somewhere with a digital portfolio. The most challenging part of this was figuring out the right design. There were projects like Brittany Chiangs that looked incredible with elegant and effective typogography, however I also wanted to learn about 3D animations. This resulted in a minimilistic React + ThreeJS project, and while there\'s still a lot I want to improve with the design, I learned a lot as well.',
     img: proctorUTS,
-    icons: ['devicon-react-original', 'devicon-javascript-plain', 'devicon-html5-plain', 'devicon-css3-plain', 'devicon-tailwindcss-plain', 'devicon-threejs-original'],
+    icons: ['react', 'javascript', 'html5', 'css3', 'tailwindcss', 'threejs'],
     gitLink: 'www.github.com',
     readMoreLink: 'localhost:5173/works',
     websiteLink: 'https://proctor-uts.vercel.app/'
@@ -152,7 +207,7 @@ const projects = [
     title: 'School@Home',
     text: 'Needed to start somewhere with a digital portfolio. The most challenging part of this was figuring out the right design. There were projects like Brittany Chiangs that looked incredible with elegant and effective typogography, however I also wanted to learn about 3D animations. This resulted in a minimilistic React + ThreeJS project, and while there\'s still a lot I want to improve with the design, I learned a lot as well.',
     img: schoolAtHome,
-    icons: ['devicon-react-original', 'devicon-javascript-plain', 'devicon-html5-plain', 'devicon-css3-plain', 'devicon-tailwindcss-plain', 'devicon-threejs-original'],
+    icons: ['react', 'javascript', 'html5', 'css3', 'tailwindcss', 'threejs'],
     gitLink: 'www.github.com',
     readMoreLink: 'localhost:5173/works'
   },
@@ -396,4 +451,4 @@ const services = [
 //   },
 // ];
 
-export { jobs, projects, services };
+export { jobs, projects, services, iconList, toolbox };
