@@ -76,9 +76,9 @@ const iconList = {
   'django': ['django-plain', 'https://www.djangoproject.com/', 'Django'],
   'djangorest': ['djangorest-plain-wordmark', 'https://www.django-rest-framework.org/', 'Django REST Framework'],
   'docker': ['docker-plain', 'https://www.docker.com/', 'Docker'],
-  'fastapi': ['fastapi-original', 'https://fastapi.tiangolo.com/', 'FastAPI'],
+  'fastapi': ['fastapi-plain', 'https://fastapi.tiangolo.com/', 'FastAPI'],
   'figma': ['figma-plain', 'https://www.figma.com/', 'Figma'],
-  'firebase': ['firebase-original', 'https://firebase.google.com/', 'Firebase'],
+  'firebase': ['firebase-plain', 'https://firebase.google.com/', 'Firebase'],
   'git': ['git-plain', 'https://git-scm.com/', 'Git'],
   'github': ['github-original', 'https://github.com', 'GitHub'],
   'go': ['go-original-wordmark', 'https://golang.org/', 'Go'],
@@ -88,7 +88,7 @@ const iconList = {
   'javascript': ['javascript-plain', 'https://developer.mozilla.org/en-US/docs/Web/JavaScript', 'JavaScript'],
   'jira': ['jira-plain', 'https://www.atlassian.com/software/jira', 'Jira'],
   'jupyter': ['jupyter-plain', 'https://jupyter.org/', 'Jupyter'],
-  'kera': ['keras-plain', 'https://keras.io/', 'Keras'],
+  'keras': ['keras-plain', 'https://keras.io/', 'Keras'],
   'kubernetes': ['kubernetes-plain', 'https://kubernetes.io/', 'Kubernetes'],
   'linux': ['linux-plain', 'https://www.linux.org/', 'Linux'],
   'next': ['nextjs-plain', 'https://nextjs.org/', 'Next.js'],
@@ -161,29 +161,35 @@ const projects = [
     websiteLink: ''
   },
   {
-    title: 'Survey Robot',
-    text: 'Needed to start somewhere with a digital portfolio. The most challenging part of this was figuring out the right design. There were projects like Brittany Chiangs that looked incredible with elegant and effective typogography, however I also wanted to learn about 3D animations. This resulted in a minimilistic React + ThreeJS project, and while there\'s still a lot I want to improve with the design, I learned a lot as well. Adding more random text here to take up more space and text my theory about how columns determins where the next div will be placed.',
-    img: robotLTL,
-    icons: ['react', 'javascript', 'html5', 'css3', 'tailwindcss', 'threejs'],
-    gitLink: 'www.github.com',
-    readMoreLink: 'localhost:5173/works'
-  },
-  {
-    title: 'Squidly',
-    text: 'Needed to start somewhere with a digital portfolio. The most challenging part of this was figuring out the right design. There were projects like Brittany Chiangs that looked incredible with elegant and effective typogography, however I also wanted to learn about 3D animations. This resulted in a minimilistic React + ThreeJS project, and while there\'s still a lot I want to improve with the design, I learned a lot as well.',
+    title: 'Squidly Eye-Gaze Tracker',
+    date: '2024',
+    role: 'Software Engineer',
+    text: 'A patented eye-gaze tracking system for people with disabilities. The platform uses a camera to track the users eyes, and then translates the movement into a cursor on the screen.',
     img: squidlyHomepage,
-    icons: ['react', 'javascript', 'html5', 'css3', 'tailwindcss', 'threejs'],
+    icons: ['javascript', 'tensorflow', 'python', 'keras', 'html5', 'css3'],
     gitLink: '',
     readMoreLink: 'localhost:5173/works',
     websiteLink: 'https://www.squidly.com.au/'
 
   },
   {
+    title: 'Survey Robot LLM',
+    date: '2023',
+    role: 'Software/Data Engineer',
+    text: 'Pipeline to translate unstructured, English utterances into Linear-Time Temporal Logic (LTL) for path planning. A form of semantic passing that allows a robot to follow instructions though natural langauge. Built with Python, Pytorch and the HuggingFace API.',
+    img: robotLTL,
+    icons: ['python', 'pytorch', 'docker', 'linux'],
+    gitLink: 'https://github.com/Nikkideez/bart-hf-model',
+    readMoreLink: 'localhost:5173/works'
+  },
+  {
     title: 'AutoCal',
-    text: 'Needed to start somewhere with a digital portfolio. The most challenging part of this was figuring out the right design. There were projects like Brittany Chiangs that looked incredible with elegant and effective typogography, however I also wanted to learn about 3D animations. This resulted in a minimilistic React + ThreeJS project, and while there\'s still a lot I want to improve with the design, I learned a lot as well.',
+    date: '2022',
+    role: 'Team Lead/Fullstack Engineer',
+    text: 'A smart calendar that uses K-Means clustering to predict your schedule based off historical data. Built with VueJS, NodeJS, Firebase and Python',
     img: autoCalHome,
-    icons: ['react', 'javascript', 'html5', 'css3', 'tailwindcss', 'threejs'],
-    gitLink: 'www.github.com',
+    icons: ['vuejs', 'nodejs', 'firebase', 'python', 'fastapi', 'scikitLearn', 'javascript', 'html5', 'css3'],
+    gitLink: 'https://github.com/Nikkideez/SIS-Frontend',
     readMoreLink: 'localhost:5173/works'
   },
   {
