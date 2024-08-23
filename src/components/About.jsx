@@ -37,8 +37,8 @@ const ServiceCard = ({ index, title, icon }) => (
 );
 
 const About = () => {
-  const [isTypingComplete, setIsTypingComplete] = React.useState(false);
-  console.log(isTypingComplete);
+  // const [isTypingComplete, setIsTypingComplete] = React.useState(false);
+  // console.log(isTypingComplete);
 
 
   return (

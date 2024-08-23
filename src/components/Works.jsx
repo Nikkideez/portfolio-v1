@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect, useMemo } from 'react'
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants"
 import { motion } from 'framer-motion';
@@ -17,16 +17,28 @@ const reorderProjects = (projects, columns) => {
 }
 
 // projects component
-const ProjectContainer = ({ index, title, text, img, stackIcons, gitLink, readMoreLink, websiteLink }) => {
+const ProjectContainer = ({ index, title, text, img, stackIcons, gitLink, readMoreLink, websiteLink, leafNodes }) => {
   const h2Style = "text-[20px] text-[#E9E3E6] font-bold mt-1"
   const pStyle = "mt-2 text-gray-300 text-[14px] leading-tight"
-  const iDivStyle = "flex mt-4"
+  const iDivStyle = "flex mt-1 pb-9"
   const iconStyle = "text-[2rem] mx-2 hover:text-pink-500 text-gray-500"
   const buttonDivStyle = "flex mt-4 items-center"
   const gitButtonStyle = "mr-4 ml-2 hover:text-emerald-500 text-[#C3BABA]"
   const readMoreButtonStyle = "border-2 p-2 text-[0.75rem] rounded-sm hover:text-emerald-500 hover:border-emerald-500 text-[#C3BABA] border-[#C3BABA]"
+  const [isHovered, setIsHovered] = useState(false)
+  // console.log(leafNodes)
+  // console.log(window.innerWidth)
+
   return (
-    <div className="break-inside-avoid mb-7 group">
+    <motion.div
+      // layout
+      className={`break-inside-avoid mb-7 group ${(!leafNodes.includes(index)) && "break-after-avoid"}`}
+      whileHover={{ scale: 1.10 }}
+      transition={{ duration: 0.3 }}
+      onHoverStart={() => setIsHovered(true)}
+      onHoverEnd={() => setIsHovered(false)}
+      onTap={() => setIsHovered(!isHovered)}
+    >
       <div className='relative'>
         <img src={img} className='w-full rounded-sm' />
         <div
@@ -46,36 +58,76 @@ const ProjectContainer = ({ index, title, text, img, stackIcons, gitLink, readMo
       </div>
       <h2 className={`${h2Style}`}>{title}</h2>
       <p className='text-[0.75rem] text-gray-400'>2024</p>
-      <h3 className='text-yellow-300'>Fullstack lead</h3>
-      <p className={`${pStyle}`}>{text}</p>
-      <div className={`${iDivStyle} justify-start`}>
+      <h3 className='text-yellow-500'>Fullstack lead</h3>
+      <motion.p
+        className="mt-2 text-zinc-300 text-[14px] leading-tight overflow-hidden"
+        // initial={{ opacity: 0 }}
+        animate={{ maxHeight: isHovered ? '10em' : '0px', marginBottom: isHovered ? '15px' : '0px' }}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
+      >
+        {text}
+      </motion.p>
+      <div className={`${iDivStyle} justify-start flex-wrap`}>
         {stackIcons.map((iconName, index) => (
           <a key={index} href={iconList[iconName][1]}>
             <i className={`devicon-${iconList[iconName][0]} ${iconStyle}`}></i>
           </a>
         ))}
       </div>
-      {/* <div className={`${buttonDivStyle} justify-start`}>
-        <a href={gitLink} className={`${gitButtonStyle}`}>
-          <i className="devicon-github-original text-[2rem]"></i>
-        </a>
-        <a href={readMoreLink} className={`${readMoreButtonStyle}`}>
-          Read More
-        </a>
-      </div> */}
-    </div>
+    </motion.div>
   );
 }
 
 const Works = () => {
   const columns = 3;
-  const reorderedProjects = reorderProjects(projects, columns);
+  const orderedProjects = reorderProjects(projects, columns);
+  const [windowSize, setWindowSize] = useState(window.innerWidth);
+
+  // const findLeafNodes = (totalElements, columns) => {
+  //   const baseItemsPerColumn = Math.floor(totalElements / columns);
+  //   const remainder = totalElements % columns;
+
+  //   // Initialize the first value
+  //   let accumulatedValue = -1;
+
+  //   const leafIndexes = Array.from({ length: columns }, (_, i) => {
+  //     const value = i < remainder ? baseItemsPerColumn + 1: baseItemsPerColumn ;
+  //     accumulatedValue += value;
+  //     return accumulatedValue;
+  //   });
+
+  //   return leafIndexes;
+  // }
+
+  // const leafNodes = findLeafNodes(orderedProjects.length, columns)
+
+  // const leafNodes = window.innerWidth < 
+
+  // console.log(window.innerWidth)
+
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowSize(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  const leafNodes = useMemo(() => {
+    return windowSize > 1024 ? [2, 4, 6] : [3, 6];
+  }, [windowSize]);
+
 
   return (
     <>
       <h1 className='clamped-text-3 font-black text-center'>Projects</h1>
       <div className={`columns-1 md:columns-2 lg:columns-3 gap-9 mt-9`}>
-        {reorderedProjects.map((project, index) => (
+        {orderedProjects.map((project, index) => (
           <ProjectContainer
             key={index}
             index={index}
@@ -86,6 +138,7 @@ const Works = () => {
             gitLink={project.gitLink}
             readMoreLink={project.readMoreLink}
             websiteLink={project.websiteLink}
+            leafNodes={leafNodes}
           />
         ))}
       </div>

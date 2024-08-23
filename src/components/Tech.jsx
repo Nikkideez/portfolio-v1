@@ -3,7 +3,6 @@ import React from "react";
 import { SectionWrapper } from "../hoc";
 import { Toolbox3 } from "./canvas";
 import { toolbox, iconList } from "../constants";
-import { color } from "framer-motion";
 
 
 const Tech = () => {
@@ -31,11 +30,11 @@ const Tech = () => {
         <h2 className="clamped-text-2 text-tertiary">
           Toolbox
         </h2>
-        <h3 className="text-[1.4rem] font-thin text-secondary mt-3">Core</h3>
+        <h3 className="text-[1.4rem] font-thin text-secondary mt-5 mb-1">Core</h3>
         <p className="break-words text-yellow-500 ">
           {coreList}
         </p>
-        <h3 className="text-[1.4rem] font-thin text-secondary mt-5">Knowledgeable</h3>
+        <h3 className="text-[1.4rem] font-thin text-secondary mt-5 mb-1">Knowledgeable</h3>
         <p className="break-words text-[#d7d0c8] ">
           {knowledgeList}
         </p>

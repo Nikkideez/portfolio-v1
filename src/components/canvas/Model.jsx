@@ -86,6 +86,7 @@ const ModelCanvas = ({setTextChange}) => {
         far: 200,
         // position: cameraConfigs[currentIndex].position, // Set initial camera position
       }}
+      className="hover:cursor-pointer"
     >
       <Suspense fallback={<CanvasLoader />}>
         <group 
