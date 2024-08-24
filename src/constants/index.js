@@ -49,6 +49,10 @@ import {
 
 export const navLinks = [
   {
+    id: "/",
+    title: "Top",
+  },
+  {
     id: "about",
     title: "About",
   },
@@ -63,50 +67,50 @@ export const navLinks = [
 ];
 
 const iconList = {
-  aws: ['amazonwebservices-plain-wordmark', 'https://aws.amazon.com/', 'Amazon Web Services'],
-  anaconda: ['anaconda-original', 'https://www.anaconda.com/', 'Anaconda'],
-  archlinux: ['archlinux-plain', 'https://archlinux.org/', 'Arch Linux'],
-  azure: ['azure-original', 'https://azure.microsoft.com/', 'Microsoft Azure'],
-  bash: ['bash-plain', 'https://www.gnu.org/software/bash/', 'Bash'],
-  blender: ['blender-original', 'https://www.blender.org/', 'Blender'],
-  c: ['c-plain', 'https://en.wikipedia.org/wiki/C_(programming_language)', 'C'],
-  centos: ['centos-plain', 'https://www.centos.org/', 'CentOS'],
-  cmake: ['cmake-plain', 'https://cmake.org/', 'CMake'],
-  css3: ['css3-plain', 'https://developer.mozilla.org/en-US/docs/Web/CSS', 'CSS3'],
-  django: ['django-plain', 'https://www.djangoproject.com/', 'Django'],
-  djangorest: ['djangorest-plain-wordmark', 'https://www.django-rest-framework.org/', 'Django REST Framework'],
-  docker: ['docker-plain', 'https://www.docker.com/', 'Docker'],
-  fastapi: ['fastapi-plain', 'https://fastapi.tiangolo.com/', 'FastAPI'],
-  figma: ['figma-plain', 'https://www.figma.com/', 'Figma'],
-  firebase: ['firebase-plain', 'https://firebase.google.com/', 'Firebase'],
-  git: ['git-plain', 'https://git-scm.com/', 'Git'],
-  github: ['github-original', 'https://github.com', 'GitHub'],
-  go: ['go-original-wordmark', 'https://golang.org/', 'Go'],
-  hadoop: ['hadoop-plain', 'https://hadoop.apache.org/', 'Hadoop'],
-  html5: ['html5-plain', 'https://developer.mozilla.org/en-US/docs/Web/HTML', 'HTML5'],
-  java: ['java-plain', 'https://www.java.com/', 'Java'],
-  javascript: ['javascript-plain', 'https://developer.mozilla.org/en-US/docs/Web/JavaScript', 'JavaScript'],
-  jira: ['jira-plain', 'https://www.atlassian.com/software/jira', 'Jira'],
-  jupyter: ['jupyter-plain', 'https://jupyter.org/', 'Jupyter'],
-  keras: ['keras-plain', 'https://keras.io/', 'Keras'],
-  kubernetes: ['kubernetes-plain', 'https://kubernetes.io/', 'Kubernetes'],
-  linux: ['linux-plain', 'https://www.linux.org/', 'Linux'],
-  next: ['nextjs-plain', 'https://nextjs.org/', 'Next.js'],
-  nginx: ['nginx-original', 'https://www.nginx.com/', 'Nginx'],
-  nodejs: ['nodejs-plain', 'https://nodejs.org/', 'Node.js'],
-  postgresql: ['postgresql-plain', 'https://www.postgresql.org/', 'PostgreSQL'],
-  python: ['python-plain', 'https://www.python.org/', 'Python'],
-  pytorch: ['pytorch-original', 'https://pytorch.org/', 'PyTorch'],
-  rabbitmq: ['rabbitmq-original', 'https://www.rabbitmq.com/', 'RabbitMQ'],
-  react: ['react-original', 'https://reactjs.org/', 'React'],
-  redhat: ['redhat-plain', 'https://www.redhat.com/en', 'Red Hat'],
-  sas: ['', 'https://www.sas.com/', 'SAS'],
-  scikitLearn: ['scikitlearn-plain', 'https://scikit-learn.org/stable/', 'scikit-learn'],
-  solidity: ['solidity-plain', 'https://soliditylang.org/', 'Solidity'],
-  tailwindcss: ['tailwindcss-original', 'https://tailwindcss.com/', 'Tailwind CSS'],
-  tensorflow: ['tensorflow-original', 'https://www.tensorflow.org/', 'TensorFlow'],
-  threejs: ['threejs-original', 'https://threejs.org/', 'Three.js'],
-  vuejs: ['vuejs-plain', 'https://vuejs.org/', 'Vue.js'],
+  aws: ['devicon-amazonwebservices-plain-wordmark', 'https://aws.amazon.com/', 'Amazon Web Services'],
+  anaconda: ['devicon-anaconda-original', 'https://www.anaconda.com/', 'Anaconda'],
+  archlinux: ['devicon-archlinux-plain', 'https://archlinux.org/', 'Arch Linux'],
+  azure: ['devicon-azure-original', 'https://azure.microsoft.com/', 'Microsoft Azure'],
+  bash: ['devicon-bash-plain', 'https://www.gnu.org/software/bash/', 'Bash'],
+  blender: ['devicon-blender-original', 'https://www.blender.org/', 'Blender'],
+  c: ['devicon-c-plain', 'https://en.wikipedia.org/wiki/C_(programming_language)', 'C'],
+  centos: ['devicon-centos-plain', 'https://www.centos.org/', 'CentOS'],
+  cmake: ['devicon-cmake-plain', 'https://cmake.org/', 'CMake'],
+  css3: ['devicon-css3-plain', 'https://developer.mozilla.org/en-US/docs/Web/CSS', 'CSS3'],
+  django: ['devicon-django-plain', 'https://www.djangoproject.com/', 'Django'],
+  djangorest: ['devicon-djangorest-plain-wordmark', 'https://www.django-rest-framework.org/', 'Django REST Framework'],
+  docker: ['devicon-docker-plain', 'https://www.docker.com/', 'Docker'],
+  fastapi: ['devicon-fastapi-plain', 'https://fastapi.tiangolo.com/', 'FastAPI'],
+  figma: ['devicon-figma-plain', 'https://www.figma.com/', 'Figma'],
+  firebase: ['devicon-firebase-plain', 'https://firebase.google.com/', 'Firebase'],
+  git: ['devicon-git-plain', 'https://git-scm.com/', 'Git'],
+  github: ['devicon-github-original', 'https://github.com', 'GitHub'],
+  go: ['devicon-go-original-wordmark', 'https://golang.org/', 'Go'],
+  hadoop: ['devicon-hadoop-plain', 'https://hadoop.apache.org/', 'Hadoop'],
+  html5: ['devicon-html5-plain', 'https://developer.mozilla.org/en-US/docs/Web/HTML', 'HTML5'],
+  java: ['devicon-java-plain', 'https://www.java.com/', 'Java'],
+  javascript: ['devicon-javascript-plain', 'https://developer.mozilla.org/en-US/docs/Web/JavaScript', 'JavaScript'],
+  jira: ['devicon-jira-plain', 'https://www.atlassian.com/software/jira', 'Jira'],
+  jupyter: ['devicon-jupyter-plain', 'https://jupyter.org/', 'Jupyter'],
+  keras: ['devicon-keras-plain', 'https://keras.io/', 'Keras'],
+  kubernetes: ['devicon-kubernetes-plain', 'https://kubernetes.io/', 'Kubernetes'],
+  linux: ['devicon-linux-plain', 'https://www.linux.org/', 'Linux'],
+  next: ['devicon-nextjs-plain', 'https://nextjs.org/', 'Next.js'],
+  nginx: ['devicon-nginx-original', 'https://www.nginx.com/', 'Nginx'],
+  nodejs: ['devicon-nodejs-plain', 'https://nodejs.org/', 'Node.js'],
+  postgresql: ['devicon-postgresql-plain', 'https://www.postgresql.org/', 'PostgreSQL'],
+  python: ['devicon-python-plain', 'https://www.python.org/', 'Python'],
+  pytorch: ['devicon-pytorch-original', 'https://pytorch.org/', 'PyTorch'],
+  rabbitmq: ['devicon-rabbitmq-original', 'https://www.rabbitmq.com/', 'RabbitMQ'],
+  react: ['devicon-react-original', 'https://reactjs.org/', 'React'],
+  redhat: ['devicon-redhat-plain', 'https://www.redhat.com/en', 'Red Hat'],
+  sas: ['icon-sas-logo', 'https://www.sas.com/', 'SAS'],
+  scikitLearn: ['devicon-scikitlearn-plain', 'https://scikit-learn.org/stable/', 'scikit-learn'],
+  solidity: ['devicon-solidity-plain', 'https://soliditylang.org/', 'Solidity'],
+  tailwindcss: ['devicon-tailwindcss-original', 'https://tailwindcss.com/', 'Tailwind CSS'],
+  tensorflow: ['devicon-tensorflow-original', 'https://www.tensorflow.org/', 'TensorFlow'],
+  threejs: ['devicon-threejs-original', 'https://threejs.org/', 'Three.js'],
+  vuejs: ['devicon-vuejs-plain', 'https://vuejs.org/', 'Vue.js'],
 };
 
 const toolbox = {
@@ -114,6 +118,11 @@ const toolbox = {
   "exclude": []
 }
 
+const socials = [
+  { className: 'icon-mail4', link: 'mailto:n.deo@hotmail.co.uk' },
+  { className: 'icon-github', link: 'https://github.com/Nikkideez' },
+  { className: 'icon-linkedin', link: 'https://www.linkedin.com/in/ndeo' },
+]
 
 const jobs = [
   {
@@ -163,7 +172,7 @@ const projects = [
   {
     title: 'Squidly Eye-Gaze Tracker',
     date: '2024',
-    role: 'Software Engineer',
+    role: 'Software Engineer / Lead Investigator',
     text: 'Patented eye-gaze tracking system for people with disabilities. The platform uses a camera to track the users eyes, and then translates the movement into a cursor on the screen.',
     img: squidlyHomepage,
     icons: ['javascript', 'tensorflow', 'python', 'keras', 'html5', 'css3'],
@@ -185,7 +194,7 @@ const projects = [
   {
     title: 'AutoCal',
     date: '2022',
-    role: 'Team Lead/Fullstack Engineer',
+    role: 'Team Lead / Fullstack Engineer',
     text: 'Smart calendar that uses K-Means clustering to predict your schedule based off historical data. Built with VueJS, NodeJS, Firebase and Python',
     img: autoCalHome,
     icons: ['vuejs', 'nodejs', 'firebase', 'python', 'fastapi', 'scikitLearn', 'javascript', 'html5', 'css3'],
@@ -208,17 +217,19 @@ const projects = [
     role: 'Frontend Lead',
     text: 'Realtime invigilator system to detect plagiarism for students taking exams as home. Built with NextJS, Firebase, WebRTC, Tensorflow and Nodejs.',
     img: proctorUTS,
-    icons: ['next','react', 'javascript', 'html5', 'css3', 'firebase', 'tensorflow', 'nodejs'],
+    icons: ['next', 'react', 'javascript', 'html5', 'css3', 'firebase', 'tensorflow', 'nodejs'],
     gitLink: 'www.github.com',
     readMoreLink: 'localhost:5173/works',
     websiteLink: 'https://proctor-uts.vercel.app/'
   },
   {
     title: 'School@Home',
-    text: 'Needed to start somewhere with a digital portfolio. The most challenging part of this was figuring out the right design. There were projects like Brittany Chiangs that looked incredible with elegant and effective typogography, however I also wanted to learn about 3D animations. This resulted in a minimilistic React + ThreeJS project, and while there\'s still a lot I want to improve with the design, I learned a lot as well.',
+    date: '2021',
+    role: 'Frontend Lead',
+    text: 'An online school platform that was made during covid to create a virtual classroom for students. Built with React, MaterialUI, and NodeJS',
     img: schoolAtHome,
-    icons: ['react', 'javascript', 'html5', 'css3', 'tailwindcss', 'threejs'],
-    gitLink: 'www.github.com',
+    icons: ['react', 'javascript', 'html5', 'css3', 'nodejs'],
+    gitLink: 'https://github.com/13613118/2A-Team-5',
     readMoreLink: 'localhost:5173/works'
   },
   // {
@@ -461,4 +472,4 @@ const services = [
 //   },
 // ];
 
-export { jobs, projects, services, iconList, toolbox };
+export { jobs, projects, services, iconList, toolbox, socials };

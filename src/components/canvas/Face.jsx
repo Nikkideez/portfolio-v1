@@ -2,7 +2,7 @@ import React, { Suspense, useRef } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { OrbitControls, Float, Preload, useGLTF, Wireframe } from "@react-three/drei";
 import * as THREE from "three";
-import CanvasLoader from "../Loader";
+import CanvasLoader from "../Canvasloader";
 
 const Model = ({ ...props }) => {
   const gltf = useGLTF("./face/scene.gltf");

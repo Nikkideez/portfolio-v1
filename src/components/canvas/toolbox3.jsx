@@ -19,7 +19,7 @@ function Icon({ iconName, hovered, onPointerOver, onPointerOut, onClick, ...prop
         // material={<meshPhysicalMaterial side={DoubleSide} opacity={0.1} />}
         >
             <i
-                className={`devicon-${iconName} colored clamped-text-3`}
+                className={`${iconName} colored clamped-text-3`}
                 // style={{ fontSize: '58px' }}
                 onMouseOver={onPointerOver}
                 onMouseOut={onPointerOut}
@@ -71,7 +71,7 @@ function Word({ children, iconName, ...props }) {
     );
 }
 
-function Cloud({ count = 4, radius = 20 }) {
+function Cloud({ radius = 20 }) {
     const keys = Object.keys(iconList);
 
     const words = useMemo(() => {
@@ -93,10 +93,10 @@ function Cloud({ count = 4, radius = 20 }) {
             }
         }
         return temp;
-    }, [count, radius]);
+    }, [radius]);
 
     return words.map(([pos, iconName], index) => (
-        <Word key={index} position={pos} iconName={iconName} children={iconName.split('-')[0]} />
+        <Word key={index} position={pos} iconName={iconName} children={iconName.split('-')[1]} />
     ));
 }
 
@@ -112,7 +112,7 @@ function GroupRotation() {
 
     return (
         <group rotation={[50, 10.5, 10]} ref={sphereRef}>
-            <Cloud count={8} radius={20} />
+            <Cloud radius={20} />
         </group>
     );
 }

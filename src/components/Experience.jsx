@@ -16,15 +16,15 @@ const JobExperience = ({ index, logoSrc, company, title, period, type, responsib
         <img src={logoSrc} className='h-[4rem]' />
       </div>
       <div className='col-span-6 md:col-span-3 col-start-3 md:col-start-2 '>
-        <h2 className='text-[1.1rem]'>{title}</h2>
-        <p >{company}</p>
-        <p>{period}</p>
-        <p>{type}</p>
+        <h2 className='text-white-ish'>{company}</h2>
+        <h2 className='text-[1.2rem] text-white-ish'>{title}</h2>
+        <p className='text-[0.85em] text-secondary'>{period}</p>
+        <p className='text-[0.85em] text-secondary'>{type}</p>
       </div>
-      <div className={`col-span-8 md:col-span-6 md:col-start-5 mb-[40px] md:mb-[0]`}>
+      <div className={`col-span-8 md:col-span-6 md:col-start-5 mb-[40px] md:mb-[0] group`}>
         <ul className='list-none'>
           {responsibilities.map((responsibility, index) => (
-            <li key={index} className="before:content-['→'] before:mr-2 before:text-gray-500 text-[14px]">
+            <li key={index} className="before:content-['→'] before:mr-2 before:text-gray-500 text-[14px] text-secondary group-hover:text-tertiary">
               {responsibility}
             </li>
           ))}

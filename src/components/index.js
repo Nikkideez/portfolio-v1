@@ -7,6 +7,9 @@ import Experience from './Experience';
 import Works from './Works';
 import Feedbacks from './Feedbacks';
 import Contact from './Contact';
+import Cogwheel from './Cogwheel';
+import CogwheelSide from './CogwheelSide'
+import Loader from './Loader';
 
 export {
   Hero,
@@ -19,6 +22,9 @@ export {
   Contact,
   ModelCanvas, 
   Face,
+  Cogwheel,
+  CogwheelSide,
+  Loader
   // BallCanvas, 
   // ComputersCanvas, 
   // StarsCanvas

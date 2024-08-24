@@ -5,11 +5,32 @@ import { styles } from '../styles'
 import { navLinks } from '../constants'
 import { ndlogo1, menu, close } from '../assets'
 
+import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
+
 const Navbar = () => {
   const [active, setActive] = useState('')
   const [toggle, setToggle] = useState(false)
+  const [hidden, setHidden] = useState(false)
+  const { scrollY } = useScroll();
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    const previous = scrollY.getPrevious();
+    if (latest > previous && latest > 150) {
+      setHidden(true);
+    } else {
+      setHidden(false);
+    }
+  })
   return (
-    <nav className={`${styles.paddingX} w-full flex items-center justify-between py-5 fixed top-0 z-20 bg-primary`}>
+    <motion.nav
+      className={`${styles.paddingX} w-full flex items-center justify-between py-5 fixed top-0 z-20 bg-primary`}
+      variants={{
+        visible: { y: 0 },
+        hidden: { y: "-100%" }
+      }}
+      animate={hidden && !toggle ? "hidden" : "visible"}
+      transition={{ duration: 0.35, ease: "easeInOut" }}
+    >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <Link
           to="/"
@@ -23,10 +44,10 @@ const Navbar = () => {
           {/* <p className="text-white text-[18px] font-bold cursor-pointer">Nikhil Deo</p> */}
         </Link>
         <ul className="list-none hidden sm:flex flex-row gap-10">
-          {navLinks.map((link) => (
+          {navLinks.slice(1).map((link) => (
             <li key={link.id} className={`${active === link.title
-                ? "text-white"
-                : "text-secondary"
+              ? "text-white"
+              : "text-secondary"
               } hover:text-white text-[18px] font-medium cursor-pointer`}
               onClick={() => setActive(link.title)}
             >
@@ -38,16 +59,23 @@ const Navbar = () => {
           <img
             src={toggle ? close : menu}
             alt="menu"
-            className="w-[28px] h-[28px] object-contain cursor-pointer"
+            className="w-[28px] h-[28px] object-contain cursor-pointer z-20 color-secondary"
             onClick={() => setToggle(!toggle)}
           />
-          <div className={`${!toggle ? 'hidden' : 'flex'} p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}>
-            <ul className="list-none flex justify-end items-start flex-col gap-4">
+          <motion.div 
+          variants={{
+            hidden: { opacity: 0, transitionEnd: { display: "none" } },
+            visible: { opacity: 1, display: "flex" }
+          }}
+          animate={toggle ? "visible" : "hidden"}
+          transition={{ duration: 0.35, ease: "easeInOut" }}
+          className={`p-6 fixed top-0 right-0 w-full h-screen z-10 rounded-xl items-center justify-center backdrop-blur-sm`}>
+            <ul className="list-none flex justify-end flex-col gap-4">
               {navLinks.map((link) => (
                 <li key={link.id} className={`${active === link.title
-                    ? "text-white"
-                    : "text-secondary"
-                  } font-poppins font-medium cursor-pointer text-[16px] `}
+                  ? "text-white"
+                  : "text-secondary"
+                  } font-poppins font-medium cursor-pointer text-[16px] text-center`}
                   onClick={() => {
                     setToggle(!toggle);
                     setActive(link.title);
@@ -57,10 +85,10 @@ const Navbar = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </motion.div>
         </div>
       </div>
-    </nav>
+    </motion.nav>
   )
 }
 

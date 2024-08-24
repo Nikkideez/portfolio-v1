@@ -4,6 +4,7 @@ import { projects } from "../constants"
 import { motion } from 'framer-motion';
 import { ArrowUpRightIcon } from '@heroicons/react/24/solid';
 import { iconList } from '../constants';
+import Cogwheel from './Cogwheel';
 
 // Function to reorder the projects array
 const reorderProjects = (projects, columns) => {
@@ -17,13 +18,7 @@ const reorderProjects = (projects, columns) => {
 }
 
 // projects component
-const ProjectContainer = ({ index, title, text, img, stackIcons, gitLink, readMoreLink, websiteLink, leafNodes }) => {
-  const h2Style = "text-[20px] text-[#E9E3E6] font-bold mt-1"
-  const pStyle = "mt-2 text-gray-300 text-[14px] leading-tight"
-  const iDivStyle = "flex mt-1 pb-9"
-  const iconStyle = "text-[2rem] mx-2 hover:text-pink-500 text-gray-500"
-  const buttonDivStyle = "flex mt-4 items-center"
-  const gitButtonStyle = "mr-4 ml-2 hover:text-emerald-500 text-[#C3BABA]"
+const ProjectContainer = ({ index, title, text, date, role, img, stackIcons, gitLink, readMoreLink, websiteLink, leafNodes }) => {
   const readMoreButtonStyle = "border-2 p-2 text-[0.75rem] rounded-sm hover:text-emerald-500 hover:border-emerald-500 text-[#C3BABA] border-[#C3BABA]"
   const [isHovered, setIsHovered] = useState(false)
   // console.log(leafNodes)
@@ -56,9 +51,9 @@ const ProjectContainer = ({ index, title, text, img, stackIcons, gitLink, readMo
           }
         </div>
       </div>
-      <h2 className={`${h2Style}`}>{title}</h2>
-      <p className='text-[0.75rem] text-gray-400'>2024</p>
-      <h3 className='text-yellow-500'>Fullstack lead</h3>
+      <h2 className="text-[20px] text-[#E9E3E6] font-bold mt-1">{title}</h2>
+      <p className='text-[0.75rem] text-gray-400'>{date}</p>
+      <h3 className='text-yellow-500'>{role}</h3>
       <motion.p
         className="mt-2 text-zinc-300 text-[14px] leading-tight overflow-hidden"
         // initial={{ opacity: 0 }}
@@ -67,10 +62,10 @@ const ProjectContainer = ({ index, title, text, img, stackIcons, gitLink, readMo
       >
         {text}
       </motion.p>
-      <div className={`${iDivStyle} justify-start flex-wrap`}>
+      <div className="flex mt-1 pb-9 justify-start flex-wrap">
         {stackIcons.map((iconName, index) => (
           <a key={index} href={iconList[iconName][1]}>
-            <i className={`devicon-${iconList[iconName][0]} ${iconStyle}`}></i>
+            <i className={`devicon-${iconList[iconName][0]} text-[2rem] mx-2 hover:text-pink-500 text-gray-500`}></i>
           </a>
         ))}
       </div>
@@ -125,13 +120,19 @@ const Works = () => {
 
   return (
     <>
-      <h1 className='clamped-text-3 font-black text-center'>Projects</h1>
+      {/* <h1 className='clamped-text-3 font-black text-center'>Projects</h1> */}
+      <div className='grid grid-cols-10 w-full items-end my-28'>
+        <h1 className='col-span-2 col-start-2 md:col-start-4 clamped-text-3 font-black text-right text-tertiary'>Projects</h1>
+        <Cogwheel />
+      </div>
       <div className={`columns-1 md:columns-2 lg:columns-3 gap-9 mt-9`}>
         {orderedProjects.map((project, index) => (
           <ProjectContainer
             key={index}
             index={index}
             title={project.title}
+            date={project.date}
+            role={project.role}
             text={project.text}
             img={project.img}
             stackIcons={project.icons}

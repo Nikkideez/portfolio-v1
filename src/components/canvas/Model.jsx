@@ -2,7 +2,7 @@ import React, { Suspense, useEffect, useState, useRef, useMemo } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF, Wireframe } from "@react-three/drei";
 
-import CanvasLoader from "../Loader";
+import CanvasLoader from "../Canvasloader";
 
 const Model = ({ geometry }) => {
   return (

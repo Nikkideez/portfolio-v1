@@ -61,21 +61,23 @@ const Contact = () => {
               // loop
               className={styles.sectionHeadText}
             />
-            <motion.div
-
-              className='flex flex-row'
+            <motion.a
+              className='flex flex-row items-center mt-2 group'
               variants={fadeIn("", "", 4, 1)}
+              href='mailto:n.deo@hotmail.co.uk'
             >
-              <InboxIcon className='h-8 w-8 text-[#E9E3E6] mr-2' />
-              <p className='text-pink-500 text-[1.2rem]'>n.deo@hotmail.co.uk</p>
-            </motion.div>
-            <motion.div
-              className='flex flex-row'
+              <i className='icon-mail4 text-secondary text-[1.6rem] text-[#E9E3E6] mr-2 group-hover:text-teal-500' />
+              <p className='text-pink-500 text-[1.2rem] group-hover:underline group-hover:text-teal-500'>n.deo@hotmail.co.uk</p>
+            </motion.a>
+            <motion.a
+              className='flex flex-row items-center mt-2 group'
               variants={fadeIn("", "", 4.2, 1)}
+              href="https://www.linkedin.com/in/ndeo/"
             >
-              <UserCircleIcon className='h-8 w-8 text-[#E9E3E6] mr-2' />
-              <p className='text-pink-300 text-[1.2rem]'>www.linkedin.com/in/ndeo</p>
-            </motion.div>
+              {/* <UserCircleIcon className='h-8 w-8 text-[#E9E3E6] mr-2' /> */}
+              <i className='icon-linkedin text-secondary text-[1.6rem] text-[#E9E3E6] mr-2 group-hover:text-teal-500' />
+              <p className='text-pink-300 text-[1.2rem] group-hover:underline group-hover:text-teal-500'>www.linkedin.com/in/ndeo</p>
+            </motion.a>
           </motion.div>
           {/* <motion.p
             variants={fadeIn("", "", 4, 1)}
