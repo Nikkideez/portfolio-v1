@@ -4,9 +4,9 @@ import ModelCanvas from "./Model";
 // import StarsCanvas from "./Stars";
 // import App from "./toolbox";
 // import Toolbox from "./toolbox2"
-import Toolbox3 from "./toolbox3"
+import Toolsphere from "./Toolsphere"
 import Face from "./Face"
 import Paperplane from "./Paperplane"
 
 // export { ModelCanvas, BallCanvas, ComputersCanvas, StarsCanvas, App, Toolbox, Toolbox3};
-export { ModelCanvas, Face, Toolbox3, Paperplane};
+export { ModelCanvas, Face, Toolsphere, Paperplane};

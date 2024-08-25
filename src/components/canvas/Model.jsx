@@ -1,5 +1,5 @@
 import React, { Suspense, useEffect, useState, useRef, useMemo } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
+import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF, Wireframe } from "@react-three/drei";
 
 import CanvasLoader from "../Canvasloader";
@@ -20,21 +20,17 @@ const Model = ({ geometry }) => {
 
 const ModelCanvas = ({setTextChange}) => {
   const gltfFiles = [
-    "./Hat2/Hardhat.glb",
-    // "./Keyboard2/Commodore.glb",
     "./Keyboard/Keyboard.glb",
+    "./Hat2/Hardhat.glb",
     "./Mountain4/Mountain.glb",
-    // "./face/scene.gltf", // Add more paths here
     "./Computer2/computer2.glb"
   ];
 
   const cameraConfigs = [
-    { position: [0, 0, 0], rotation: [-0.6, 2, 0], scale: 0.01, text: "building things" }, // Config for the first model
-    { position: [0, 0, 0], rotation: [1, 0, -0.2], scale: 0.012, text: "writing code" }, // Config for the second model
-    { position: [0, -0.5, 0], rotation: [0, 0, 0], scale: 0.0055, text: "climbing" }, // Config for the second model
-    // { position: [0, -1.4, 0], rotation: [0,0,0], scale: 0.25 }, // Config for the third model
-    { position: [0, -1.4, 0], rotation: [0,0,0], scale: 0.04, text: "computers" }, // Config for the third model
-    // Add more configurations here
+    { position: [0, 0, 0], rotation: [1, 2.9, -0.5], scale: 0.012, text: "writing code" }, 
+    { position: [0, 0, 0], rotation: [-0.6, 2, 0], scale: 0.01, text: "building things" }, 
+    { position: [0, -0.5, 0], rotation: [0, 0, 0], scale: 0.0055, text: "climbing" }, 
+    { position: [0, -1.4, 0], rotation: [0,0,0], scale: 0.04, text: "computers" },
   ];
 
   const [currentGeometry, setCurrentGeometry] = useState(null);

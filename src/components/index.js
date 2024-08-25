@@ -2,30 +2,21 @@ import { ModelCanvas, Face } from './canvas';
 import Hero from './Hero';
 import Navbar from './Navbar';
 import About from './About';
-import Tech from './Tech';
+import Toolbox from './Toolbox';
 import Experience from './Experience';
-import Works from './Works';
-import Feedbacks from './Feedbacks';
+import Projects from './Projects';
 import Contact from './Contact';
-import Cogwheel from './Cogwheel';
-import CogwheelSide from './CogwheelSide'
 import Loader from './Loader';
 
 export {
   Hero,
   Navbar,
   About,
-  Tech,
+  Toolbox,
   Experience,
-  Works,
-  Feedbacks,
+  Projects,
   Contact,
   ModelCanvas, 
   Face,
-  Cogwheel,
-  CogwheelSide,
   Loader
-  // BallCanvas, 
-  // ComputersCanvas, 
-  // StarsCanvas
 }

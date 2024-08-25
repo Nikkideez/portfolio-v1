@@ -14,9 +14,6 @@ const Cogwheel = () => {
           <motion.div
             className="absolute w-[80px] h-[80px] top-[-40px] left-[20px]"
             style={{ rotate: rotateReverse }}
-          // initial={{ rotate: 0 }}
-          // animate={{ rotate: rotate.current }}
-          // transition={{ ease: "linear", stiffness: 200 }}
           >
             <svg id="blue" viewBox="0 0 100 100" className='stroke-secondary stroke-[1px] hover:stroke-pink-500'>
               <path
@@ -32,9 +29,6 @@ const Cogwheel = () => {
           <motion.div
             className="absolute w-[150px] h-[150px] left-[90px] top-[-50px]"
             style={{ rotate: scrollYSpringSlow }}
-          // initial={{ rotate: 0 }}
-          // animate={{ rotate: -rotate.current }} // Reverse direction
-          // transition={{ type: "spring", stiffness: 50 }}
           >
             <svg id="pink" viewBox="0 0 100 100" className='stroke-secondary stroke-[1px] hover:stroke-pink-500 rotate-6'>
               <path
@@ -50,9 +44,6 @@ const Cogwheel = () => {
           <motion.div
             className="absolute w-[100px] h-[100px] top-[33px] left-[0px] "
             style={{ rotate: scrollYSpringSlow }}
-          // initial={{ rotate: 0 }}
-          // animate={{ rotate: rotate.current }}
-          // transition={{ type: "spring", stiffness: 50 }}
           >
             <svg id="yellow" viewBox="0 0 100 100" className='stroke-secondary stroke-[1px] hover:stroke-pink-500 rotate-[-4deg]'>
               <path
@@ -65,19 +56,6 @@ const Cogwheel = () => {
             </svg>
           </motion.div>
         </div>
-
-        {/* <div className="absolute rounded-full shadow-inner shadow-gray-700 shadow-[0_0_50px_white] w-24 h-24 opacity-65"></div> */}
-
-        {/* <svg className="absolute top-[-19px] left-[-19px]" viewBox="0 0 100 100">
-        <defs>
-          <filter id="blur">
-            <feGaussianBlur in="SourceGraphic" stdDeviation="13" />
-          </filter>
-        </defs>
-        <circle cx="70" cy="70" r="66" fill="transparent" stroke="white" strokeWidth="40" filter="url(#blur)" />
-      </svg> */}
-
-        {/* <div className="text-center text-lightgray text-lg font-sans">loading</div> */}
       </div>
   );
 };

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, Suspense } from 'react'
 import { BrowserRouter } from 'react-router-dom'
-import { About, Contact, Experience, Hero, Navbar, Tech, Works, Loader } from './components'
+import { About, Contact, Experience, Hero, Navbar, Toolbox, Projects, Loader } from './components'
 
 const LazyHero = React.lazy(async () => {
   await new Promise(resolve => setTimeout(resolve, 3000));
@@ -18,13 +18,13 @@ const App = () => {
             <LazyHero />
           </div>
           <About />
-          <Tech />
+          <Toolbox />
           <Experience />
           {/* <div className='flex mr-[0px] mb-[80px]'>
           <Cogwheel />
         </div>
         <CogwheelSide className='hidden'/> */}
-          <Works />
+          <Projects />
           {/* <Feedbacks /> */}
           <div className='relative z-0'>
             <Contact />

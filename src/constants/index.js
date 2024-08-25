@@ -57,8 +57,8 @@ export const navLinks = [
     title: "About",
   },
   {
-    id: "work",
-    title: "Work",
+    id: "projects",
+    title: "Projects",
   },
   {
     id: "contact",
@@ -162,7 +162,7 @@ const projects = [
     title: 'This Portfolio',
     date: '2024',
     role: 'Frontend Developer/Designer',
-    text: 'Vite-React build that uses TailwindCSS for styling. The design was inspired by Brittany Chiangs portfolio, and the 3D animations were inspired by the ThreeJS documentation. The project was built to help showcase my work.',
+    text: 'Vite-React build that uses TailwindCSS for styling. The design was inspired by Brittany Chiangs portfolio, and the 3D animations were inspired by JavaScript Mastery and the ThreeJS documentation. The project was built to help showcase my work.',
     img: pImg,
     icons: ['react', 'javascript', 'html5', 'css3', 'tailwindcss', 'threejs'],
     gitLink: 'https://www.github.com',

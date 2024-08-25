@@ -1,27 +1,24 @@
 import React from 'react'
 import { SectionWrapper } from "../hoc";
 import { jobs } from "../constants";
-// import '../assets/company/icomoon/style.css'
+import { textVariant } from "../utils/motion";
+import { motion } from 'framer-motion';
 
 
 const JobExperience = ({ index, logoSrc, company, title, period, type, responsibilities }) => {
-  const colClasses = ["col-start-1", "col-start-2", "col-start-3"]
+  const delay = index * 0.5
   return (
     <>
-      {/* <div className={`col-span-1 col-start-${index+2} flex items-center justify-end flex-col mt-[55px]`}>
-        <i className={`${iconClass} text-[3rem]`} />
-      </div> */}
-      {/* <div className={`col-span-1 flex items-center`}> */}
-      <div className='mt-[8px] col-span-2 md:col-span-1 md:col-start-1 flex items-center justify-center'>
+      <motion.div variants={textVariant(delay)} className='mt-[8px] col-span-2 md:col-span-1 md:col-start-1 flex items-center justify-center'>
         <img src={logoSrc} className='h-[4rem]' />
-      </div>
-      <div className='col-span-6 md:col-span-3 col-start-3 md:col-start-2 '>
+      </motion.div>
+      <motion.div variants={textVariant(delay)} className='col-span-6 md:col-span-3 col-start-3 md:col-start-2 '>
         <h2 className='text-white-ish'>{company}</h2>
         <h2 className='text-[1.2rem] text-white-ish'>{title}</h2>
         <p className='text-[0.85em] text-secondary'>{period}</p>
         <p className='text-[0.85em] text-secondary'>{type}</p>
-      </div>
-      <div className={`col-span-8 md:col-span-6 md:col-start-5 mb-[40px] md:mb-[0] group`}>
+      </motion.div>
+      <motion.div variants={textVariant(delay)} className={`col-span-8 md:col-span-6 md:col-start-5 mb-[40px] md:mb-[0] group`}>
         <ul className='list-none'>
           {responsibilities.map((responsibility, index) => (
             <li key={index} className="before:content-['→'] before:mr-2 before:text-gray-500 text-[14px] text-secondary group-hover:text-tertiary">
@@ -29,8 +26,7 @@ const JobExperience = ({ index, logoSrc, company, title, period, type, responsib
             </li>
           ))}
         </ul>
-      </div>
-      {/* <div className='col-span-10 border-b-2 border-gray-300'/> */}
+      </motion.div>
     </>
   );
 };
@@ -40,7 +36,7 @@ const Experience = () => {
   return (
     <div className='flex flex-col justify-center items-center my-[100px] '>
       <div className='grid grid-cols-8 md:grid-cols-10 mt-[5px] items-start gap-y-6 md:gap-y-20 gap-x-1'>
-        <h1 className='clamped-text-2 col-span-8 md:col-span-9 md:col-start-4'>Experience</h1>
+        <motion.h1 className='clamped-text-2 col-span-8 md:col-span-9 md:col-start-4'>Experience</motion.h1>
         {jobs.map((job, index) => (
           <JobExperience
             key={index}
@@ -53,8 +49,6 @@ const Experience = () => {
             responsibilities={job.responsibilities}
           />
         ))}
-        {/* <div className='col-span-3'>
-        </div> */}
       </div>
     </div>
   );

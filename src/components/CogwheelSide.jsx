@@ -1,5 +1,8 @@
 import React from 'react';
 import { motion, useScroll, useSpring, useTransform, useMotionValueEvent } from 'framer-motion';
+// Just testing what the wheel would look like on stuck the side of the screen next to scrollbar
+// Doesn't look as nice as the original cogwheel
+// Will probably remove this component
 
 const CogwheelSide = () => {
   const { scrollY } = useScroll();
@@ -62,19 +65,6 @@ const CogwheelSide = () => {
           />
         </svg>
       </motion.div>
-
-      {/* <div className="absolute rounded-full shadow-inner shadow-gray-700 shadow-[0_0_50px_white] w-24 h-24 opacity-65"></div> */}
-
-      {/* <svg className="absolute top-[-19px] left-[-19px]" viewBox="0 0 100 100">
-        <defs>
-          <filter id="blur">
-            <feGaussianBlur in="SourceGraphic" stdDeviation="13" />
-          </filter>
-        </defs>
-        <circle cx="70" cy="70" r="66" fill="transparent" stroke="white" strokeWidth="40" filter="url(#blur)" />
-      </svg> */}
-
-      {/* <div className="text-center text-lightgray text-lg font-sans">loading</div> */}
     </div>
   );
 };
