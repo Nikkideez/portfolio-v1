@@ -17,7 +17,7 @@ const reorderProjects = (projects, columns) => {
   return reordered;
 }
 
-const ProjectContainer = ({ index, title, text, date, role, img, stackIcons, gitLink, readMoreLink, websiteLink, leafNodes }) => {
+const ProjectContainer = ({ index, title, text, date, role, img, stackIcons, gitLink, readMoreLink, websiteLink, ytLink, leafNodes }) => {
   // const readMoreButtonStyle = "border-2 p-2 text-[0.75rem] rounded-sm hover:text-emerald-500 hover:border-emerald-500 text-[#C3BABA] border-[#C3BABA]"
   const [isHovered, setIsHovered] = useState(false)
 
@@ -36,6 +36,11 @@ const ProjectContainer = ({ index, title, text, date, role, img, stackIcons, git
         <div
           className={`absolute bottom-2 right-2 opacity-0 group-hover:opacity-100 hover:cursor-pointer transition-opacity duration-300 flex flex-col items-end`}
         >
+          {ytLink &&
+            <a href={ytLink}>
+              <i className="icon-youtube text-gray-700 text-[2rem] hover:text-[2.5rem] hover:text-pink-500 transition-all duration-300"></i>
+            </a>
+          }
           {websiteLink &&
             <a className='my-2' href={websiteLink}>
               {/* <ArrowUpRightIcon className="text-gray-700 size-8 hover:size-10 hover:text-teal-600 transition-all duration-300" /> */}
@@ -62,7 +67,7 @@ const ProjectContainer = ({ index, title, text, date, role, img, stackIcons, git
       <div className="flex mt-1 pb-9 justify-start flex-wrap">
         {stackIcons.map((iconName, index) => (
           <a key={index} href={iconList[iconName][1]}>
-            <i className={`devicon-${iconList[iconName][0]} text-[2rem] mx-2 hover:text-pink-500 text-gray-500`}></i>
+            <i className={`${iconList[iconName][0]} text-[2rem] mx-2 hover:text-pink-500 text-gray-500`}></i>
           </a>
         ))}
       </div>
@@ -136,6 +141,7 @@ const Projects = () => {
             gitLink={project.gitLink}
             readMoreLink={project.readMoreLink}
             websiteLink={project.websiteLink}
+            ytLink={project.ytlink}
             leafNodes={leafNodes}
           />
         ))}

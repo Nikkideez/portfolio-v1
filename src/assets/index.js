@@ -1,4 +1,4 @@
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import ndlogo1 from "./ndlogo3.svg";
 import backend from "./backend.png";
 import creator from "./creator.png";
@@ -8,29 +8,30 @@ import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 
-import css from "./tech/css.png";
-import docker from "./tech/docker.png";
-import figma from "./tech/figma.png";
-import git from "./tech/git.png";
-import html from "./tech/html.png";
-import javascript from "./tech/javascript.png";
-import mongodb from "./tech/mongodb.png";
-import nodejs from "./tech/nodejs.png";
-import reactjs from "./tech/reactjs.png";
-import redux from "./tech/redux.png";
-import tailwind from "./tech/tailwind.png";
-import typescript from "./tech/typescript.png";
-import threejs from "./tech/threejs.svg";
+// import css from "./tech/css.png";
+// import docker from "./tech/docker.png";
+// import figma from "./tech/figma.png";
+// import git from "./tech/git.png";
+// import html from "./tech/html.png";
+// import javascript from "./tech/javascript.png";
+// import mongodb from "./tech/mongodb.png";
+// import nodejs from "./tech/nodejs.png";
+// import reactjs from "./tech/reactjs.png";
+// import redux from "./tech/redux.png";
+// import tailwind from "./tech/tailwind.png";
+// import typescript from "./tech/typescript.png";
+// import threejs from "./tech/threejs.svg";
 
-import meta from "./company/meta.png";
-import shopify from "./company/shopify.png";
-import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
+// import meta from "./company/meta.png";
+// import shopify from "./company/shopify.png";
+// import starbucks from "./company/starbucks.png";
+// import tesla from "./company/tesla.png";
 import saslogo from "./company/sas-logo.svg";
+import squidlylogo from "./company/squidly-logo.svg";
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+// import carrent from "./carrent.png";
+// import jobit from "./jobit.png";
+// import tripguide from "./tripguide.png";
 import pImg from '../assets/projects/portfolio-png.png'
 import surveyR from '../assets/projects/Nokia TechLab_DSCF4441-Amos Wong_0.jpg'
 import robotSVG from '../assets/projects/Mediamodifier-Design.svg'
@@ -46,7 +47,7 @@ import proctorUTS from '../assets/projects/proctorUTS.png'
 import schoolAtHome from '../assets/projects/school@home.png'
 
 export {
-  logo,
+  // logo,
   ndlogo1,
   backend,
   creator,
@@ -55,27 +56,28 @@ export {
   github,
   menu,
   close,
-  css,
-  docker,
-  figma,
-  git,
-  html,
-  javascript,
-  mongodb,
-  nodejs,
-  reactjs,
-  redux,
-  tailwind,
-  typescript,
-  threejs,
-  meta,
-  shopify,
-  starbucks,
-  tesla,
+  // css,
+  // docker,
+  // figma,
+  // git,
+  // html,
+  // javascript,
+  // mongodb,
+  // nodejs,
+  // reactjs,
+  // redux,
+  // tailwind,
+  // typescript,
+  // threejs,
+  // meta,
+  // shopify,
+  // starbucks,
+  // tesla,
   saslogo,
-  carrent,
-  jobit,
-  tripguide,
+  squidlylogo,
+  // carrent,
+  // jobit,
+  // tripguide,
   pImg,
   surveyR,
   squidly,
