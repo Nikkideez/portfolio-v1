@@ -15,6 +15,7 @@ const Navbar = () => {
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     const previous = scrollY.getPrevious();
+    console.log(latest)
     if (latest > previous && latest > 150) {
       setHidden(true);
     } else {
@@ -23,7 +24,7 @@ const Navbar = () => {
   })
   return (
     <motion.nav
-      className={`${styles.paddingX} w-full flex items-center justify-between py-5 fixed top-0 z-20 bg-primary`}
+      className={`${styles.paddingX} w-[100vw] sm:w-full flex items-center justify-between py-5 fixed top-0 z-20 bg-primary`}
       variants={{
         visible: { y: 0 },
         hidden: { y: "-100%" }
@@ -68,8 +69,9 @@ const Navbar = () => {
             visible: { opacity: 1, display: "flex" }
           }}
           animate={toggle ? "visible" : "hidden"}
+          initial="hidden"
           transition={{ duration: 0.35, ease: "easeInOut" }}
-          className={`p-6 fixed top-0 right-0 w-full h-screen z-10 rounded-xl items-center justify-center backdrop-blur-sm`}>
+          className={`sm:hidden p-6 fixed top-0 left-0 w-[100vw] sm:w-full h-screen z-10 rounded-xl items-center justify-center backdrop-blur-sm`}>
             <ul className="list-none flex justify-end flex-col gap-4">
               {navLinks.map((link) => (
                 <li key={link.id} className={`${active === link.title

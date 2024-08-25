@@ -118,8 +118,8 @@ const Projects = () => {
 
   return (
     <>
-      <motion.div variants={fadeIn("left", "sping", 0, 0.75)} className='grid grid-cols-10 w-full items-end my-28'>
-        <h1 className='col-span-2 col-start-2 md:col-start-4 clamped-text-3 font-black text-right text-tertiary'>Projects</h1>
+      <motion.div variants={fadeIn("left", "sping", 0, 0.75)} className='grid grid-cols-10 w-full items-end sm:mb-36 sm:mb-0 my-28'>
+        <h1 className='col-span-1 sm:col-span-2 col-start-2 md:col-start-4 clamped-text-3 font-black text-right text-tertiary z-10'>Projects</h1>
         <Cogwheel />
       </motion.div>
       <div className={`columns-1 md:columns-2 lg:columns-3 gap-9 mt-9`}>

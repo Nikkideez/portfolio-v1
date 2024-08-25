@@ -5,6 +5,7 @@ import { staggerContainer } from "../utils/motion";
 
 const StarWrapper = (Component, idName, viewAmount=0.50) =>
   function HOC() {
+    if(window.innerWidth <= 640) viewAmount = 0.25;
     return (
       <motion.section
         variants={staggerContainer()}

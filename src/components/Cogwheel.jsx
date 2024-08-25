@@ -27,7 +27,7 @@ const Cogwheel = () => {
           </motion.div>
 
           <motion.div
-            className="absolute w-[150px] h-[150px] left-[90px] top-[-50px]"
+            className="absolute w-[150px] h-[150px] left-[90px] top-[-48px]"
             style={{ rotate: scrollYSpringSlow }}
           >
             <svg id="pink" viewBox="0 0 100 100" className='stroke-secondary stroke-[1px] hover:stroke-pink-500 rotate-6'>

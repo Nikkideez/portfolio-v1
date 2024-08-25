@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { styles } from '../styles';
 import { ModelCanvas } from './canvas';
 import { socials } from '../constants';
+import Resume from '../../public/ndeo-Resume-260824.pdf'
 
 const Hero = () => {
   const staggerElements = stagger(0.1, { startDelay: 0.2 });
@@ -29,7 +30,16 @@ const Hero = () => {
 
             <motion.h2 initial={{ opacity: 0, y: -10 }} className='clamped-text font-black text-purple-50 my-2 text-[#E9E3E6]'>Nikhil Deo</motion.h2>
             <motion.h2 initial={{ opacity: 0, y: -10 }} className='clamped-text-2 leading-[0.9] font-medium text-[#C3BABA]'>I'm a <span className='text-teal-600'>software engineer</span> who's passionate about <span className='text-pink-600'>{textChange}</span>.</motion.h2>
-            <motion.button initial={{ opacity: 0, y: -10 }} className='mt-[50px] border-2 p-2 text-[1rem] rounded-sm hover:text-emerald-500 hover:border-emerald-500 text-[#C3BABA] border-[#C3BABA]'>Download Resume</motion.button>
+            <motion.a
+                initial={{ opacity: 0, y: -10 }}
+                href={Resume}
+            >
+              <button
+                className='mt-[50px] border-2 p-2 text-[1rem] rounded-sm hover:text-emerald-500 hover:border-emerald-500 text-[#C3BABA] border-[#C3BABA]'
+              >
+                Download Resume
+              </button>
+            </motion.a>
             <motion.div initial={{ opacity: 0, y: -10 }} className='flex flex-row gap-3 mt-7 ml-1'>
               {socials.map((social, index) => (
                 <a href={social.link} key={index}>

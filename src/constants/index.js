@@ -133,7 +133,7 @@ const jobs = [
     period: 'Feb 2022 - Present',
     type: 'Fulltime',
     responsibilities: [
-      "Troubleshooting, debugging and root cause analysis for web applications based on microservices architecture using proven problem-solving methodologies.",
+      "Troubleshooting, debugging and root cause analysis for applications based on monolithic and microservices architecture using proven problem-solving methodologies.",
       "Achieving outstanding customer satisfaction by employing effective prioritization, communication, business-impact analysis and teamwork.",
       "Continuously upskilling and sharing knowledge in alignment with company goals.",
       "Becoming the voice of the customer to build user stories and improve the product.",
@@ -148,8 +148,8 @@ const jobs = [
     period: 'May 2024 - Present',
     type: 'Contract',
     responsibilities: [
-      "HR approved side project - Started this because I missed working on projects as a team to build out solutions.",
-      "Designing and improving an eye-gaze tracking system for people of disabilities.",
+      "HR approved side project that I work on outside of my regular work hours at SAS - Started this because it was a good opportunity to progress as a Software Engineer and build a product that could help people.",
+      "Currently designing and improving an eye-gaze tracking system for people of disabilities.",
       "Creating pipelines in Python to streamline R&D of Machine and Deep Learning models.",
       "Exporting Python models into production with TensorFlowJS to run on client browsers.",
     ],

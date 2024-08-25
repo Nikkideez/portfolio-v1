@@ -34,7 +34,7 @@ const JobExperience = ({ index, logoSrc, company, title, period, type, responsib
 const Experience = () => {
 
   return (
-    <div className='flex flex-col justify-center items-center my-[100px] '>
+    <div className='flex flex-col justify-center items-center my-0 md:my-[100px] '>
       <div className='grid grid-cols-8 md:grid-cols-10 mt-[5px] items-start gap-y-6 md:gap-y-20 gap-x-1'>
         <motion.h1 className='clamped-text-2 col-span-8 md:col-span-9 md:col-start-4'>Experience</motion.h1>
         {jobs.map((job, index) => (
