@@ -223,7 +223,7 @@ const projects = [
     text: 'Realtime invigilator system to detect plagiarism for students taking exams as home. Built with NextJS, Firebase, WebRTC, Tensorflow and Nodejs.',
     img: proctorUTS,
     icons: ['next', 'react', 'javascript', 'html5', 'css3', 'firebase', 'tensorflow', 'nodejs'],
-    gitLink: 'www.github.com',
+    gitLink: 'https://github.com/ahmedkhursheed23/ses2b-frontend-1',
     readMoreLink: 'localhost:5173/works',
     websiteLink: 'https://proctor-uts.vercel.app/',
     ytlink: 'https://www.youtube.com/watch?v=XOIBIbUZjek'
