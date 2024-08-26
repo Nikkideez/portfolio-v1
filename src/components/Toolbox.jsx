@@ -28,7 +28,7 @@ const Toolbox = () => {
 
   return (
     <div className="grid lg:grid-cols-5 gid-cols-1 items-center">
-      <motion.div variants={fadeIn("right", "spring", 0, 0.75)} className="col-span-2">
+      <motion.div variants={fadeIn("up", "spring", 0, 0.75)} className="col-span-2">
         <h2 className="clamped-text-2 text-tertiary">
           Toolbox
         </h2>
@@ -41,7 +41,7 @@ const Toolbox = () => {
           {knowledgeList}
         </p>
       </motion.div>
-      <motion.div variants={fadeIn("left", "spring", 0, 0.75)} className="aspect-square col-span-3">
+      <motion.div variants={fadeIn("down", "spring", 0, 0.75)} className="aspect-square col-span-3">
         <Toolsphere />
       </motion.div>
     </div>

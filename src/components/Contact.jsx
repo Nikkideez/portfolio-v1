@@ -41,7 +41,7 @@ const Contact = () => {
             </motion.a>
           </div>
         </div>
-        <motion.div variants={fadeIn("left","",3.3,1)} className="aspect-square ml-0 lg:ml-[-230px] lg:mt-[-400px] lg:mr-[-100px] order-last">
+        <motion.div variants={fadeIn("down","",3.3,1)} className="aspect-square ml-0 lg:ml-[-230px] lg:mt-[-400px] lg:mr-[-100px] order-last">
           <Paperplane />
         </motion.div>
       </div>

@@ -42,7 +42,7 @@ const About = () => {
     <>
       <div className="grid lg:grid-cols-2 gid-cols-1 items-center">
         <motion.div
-          variants={fadeIn("right", "spring", 0, 0.75)}
+          variants={fadeIn("up", "spring", 0, 0.75)}
           className="aspect-square ml-0 lg:ml-[-30px] order-last lg:order-first mt-12 lg:mt-0">
           <Face />
         </motion.div>
