@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
 import { ReactTyped } from "react-typed";
@@ -9,6 +9,7 @@ import { Paperplane } from "./canvas"
 
 
 const Contact = () => {
+  const [flying, setFlying] = React.useState(false);
 
   return (
     <>
@@ -41,8 +42,12 @@ const Contact = () => {
             </motion.a>
           </div>
         </div>
-        <motion.div variants={fadeIn("down","",3.3,1)} className="aspect-square ml-0 lg:ml-[-230px] lg:mt-[-400px] lg:mr-[-100px] order-last">
-          <Paperplane />
+        <motion.div
+          variants={fadeIn("down", "", 3.3, 1)}
+          onAnimationComplete={() => setFlying(true)}
+          className="aspect-square ml-0 lg:ml-[-230px] lg:mt-[-400px] lg:mr-[-100px] order-last"
+        >
+          <Paperplane flying={flying} setFlying={setFlying} />
         </motion.div>
       </div>
     </>

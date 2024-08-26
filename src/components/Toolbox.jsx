@@ -41,7 +41,7 @@ const Toolbox = () => {
           {knowledgeList}
         </p>
       </motion.div>
-      <motion.div variants={fadeIn("down", "spring", 0, 0.75)} className="aspect-square col-span-3">
+      <motion.div variants={fadeIn("down", "spring", 0.35, 0.75)} className="aspect-square col-span-3">
         <Toolsphere />
       </motion.div>
     </div>

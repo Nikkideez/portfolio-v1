@@ -87,41 +87,41 @@ const Model = forwardRef(({ ...props }, ref) => {
 
   return (
     <>
-    {props.flying ? <MotionPathControls focus={ref} damping={0.2} focusDamping={0.15}>
-      <Infinity/>
-      {/* <Rollercoaster/> */}
-      {/* <Heart/> */}
-      {/* <Circle centerY={1}/> */}
-      <Loop factor={0.1}/>
-    </MotionPathControls>
-    :
-    null 
-    }
-    <group ref={ref} position={[0, 0, 0]} scale={1}>
-      <Float
-        // rotation={[0, -1.4, 0]}
-        // position={[0, -1.8, -2]}
-        
-        // matrixAutoUpdate={true}
-        autoInvalidate
-      >
-        <Wireframe
-          geometry={geometry}
-          simplify={true}
-          fill={"#3a486f"}
-          fillOpacity={0.9}
-          stroke={"white"}
-          fillMix={1}
-        />
-      </Float>
-    </group>
+      {props.flying ? <MotionPathControls focus={ref} damping={0.2} focusDamping={0.15}>
+        <Infinity />
+        {/* <Rollercoaster/> */}
+        {/* <Heart/> */}
+        {/* <Circle centerY={1}/> */}
+        <Loop factor={0.1} />
+      </MotionPathControls>
+        :
+        null
+      }
+      <group ref={ref} position={[0, 0, 0]} scale={1}>
+        <Float
+          // rotation={[0, -1.4, 0]}
+          // position={[0, -1.8, -2]}
+
+          // matrixAutoUpdate={true}
+          autoInvalidate
+        >
+          <Wireframe
+            geometry={geometry}
+            simplify={true}
+            fill={"#3a486f"}
+            fillOpacity={0.9}
+            stroke={"white"}
+            fillMix={1}
+          />
+        </Float>
+      </group>
     </>
   );
 });
 
-const Face = () => {
+const Paperplane = ({flying, setFlying}) => {
   const modelRef = useRef();
-    const [flying, setFlying] = React.useState(false);
+  // const [flying, setFlying] = React.useState(false);
 
   const handleCanvasClick = () => {
     console.log("Flying");
@@ -144,11 +144,11 @@ const Face = () => {
       className="hover:cursor-pointer"
     >
       <Suspense fallback={<CanvasLoader />}>
-        <Model ref={modelRef} flying={flying}/>
+        <Model ref={modelRef} flying={flying} />
         <Preload all />
       </Suspense>
     </Canvas>
   );
 };
 
-export default Face;
+export default Paperplane;
