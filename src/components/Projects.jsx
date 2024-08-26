@@ -17,7 +17,7 @@ const reorderProjects = (projects, columns) => {
   return reordered;
 }
 
-const ProjectContainer = ({ index, title, text, date, role, img, stackIcons, gitLink, readMoreLink, websiteLink, ytLink, leafNodes }) => {
+const ProjectContainer = ({ index, title, text, date, role, img, stackIcons, gitLink, readMoreLink, websiteLink, ytLink, leafNodes, scale }) => {
   // const readMoreButtonStyle = "border-2 p-2 text-[0.75rem] rounded-sm hover:text-emerald-500 hover:border-emerald-500 text-[#C3BABA] border-[#C3BABA]"
   const [isHovered, setIsHovered] = useState(false)
 
@@ -25,7 +25,7 @@ const ProjectContainer = ({ index, title, text, date, role, img, stackIcons, git
     <motion.div
       variants={fadeIn("down", "spring", index * 0.25 + 0.5, 0.5)}
       className={`break-inside-avoid mb-7 group ${(!leafNodes.includes(index)) && "break-after-avoid"}`}
-      whileHover={{ scale: 1.10 }}
+      whileHover={{ scale: scale }}
       transition={{ duration: 0.3 }}
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
@@ -120,6 +120,10 @@ const Projects = () => {
     return windowSize > 1024 ? [2, 4, 6] : [3, 6];
   }, [windowSize]);
 
+  // Scaling break z indexes in Safari, such a weird bug 
+  const isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
+  const scale = isSafari ? 1 : 1.10;
+
 
   return (
     <>
@@ -143,6 +147,7 @@ const Projects = () => {
             websiteLink={project.websiteLink}
             ytLink={project.ytlink}
             leafNodes={leafNodes}
+            scale={scale}
           />
         ))}
       </div>
