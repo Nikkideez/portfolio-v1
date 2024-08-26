@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { styles } from '../styles';
 import { ModelCanvas } from './canvas';
 import { socials } from '../constants';
-import Resume from '../ndeo-Resume-260824.pdf'
+import Resume from '../ndeo-Resume-270824.pdf'
 
 const Hero = () => {
   const staggerElements = stagger(0.1, { startDelay: 0.2 });
