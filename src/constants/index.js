@@ -166,7 +166,7 @@ const projects = [
     text: 'Vite-React build that uses TailwindCSS for styling. The design was inspired by Brittany Chiangs portfolio, and the 3D animations were inspired by JavaScript Mastery and the ThreeJS documentation. The project was built to help showcase my work.',
     img: pImg,
     icons: ['react', 'javascript', 'html5', 'css3', 'tailwindcss', 'threejs'],
-    gitLink: 'https://www.github.com',
+    gitLink: 'https://github.com/Nikkideez/portfolio-v1',
     readMoreLink: '',
     websiteLink: '',
     ytlink: ''
