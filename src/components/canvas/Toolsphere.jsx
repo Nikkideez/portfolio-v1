@@ -29,7 +29,7 @@ function Icon({ iconName, hovered, onPointerOver, onPointerOut, onClick, ...prop
 }
 
 function Word({ children, iconName, ...props }) {
-    const fontProps = { font: '../../Inter-Bold.woff', fontSize: 2, letterSpacing: -0.05, lineHeight: 1, 'material-toneMapped': false };
+    const fontProps = { font: './Inter-Bold.woff', fontSize: 2, letterSpacing: -0.05, lineHeight: 1, 'material-toneMapped': false };
     const ref = useRef();
     const [hovered, setHovered] = useState(false);
     const [textOpacity, setTextOpacity] = useState(0); // Start with invisible text
