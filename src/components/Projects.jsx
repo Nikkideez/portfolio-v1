@@ -23,7 +23,7 @@ const ProjectContainer = ({ index, title, text, date, role, img, stackIcons, git
 
   return (
     <motion.div
-      variants={fadeIn("down", "spring", index * 0.25 + 1, 0.75)}
+      variants={fadeIn("down", "spring", index * 0.25 + 0.5, 0.5)}
       className={`break-inside-avoid mb-7 group ${(!leafNodes.includes(index)) && "break-after-avoid"}`}
       whileHover={{ scale: 1.10 }}
       transition={{ duration: 0.3 }}
